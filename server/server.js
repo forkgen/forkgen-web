@@ -1,14 +1,29 @@
 'use strict';
 
 var express = require('express'),
-	logger = require('morgan'),
+	morgan = require('morgan'),
 	cookieParser = require('cookie-parser'),
 	bodyParser = require('body-parser'),
 	path = require('path'),
-	http = require('http');
+	http = require('http'),
+	fs = require('fs');
 
 var app = express(),
 	config = require("./config/server.env");
+
+/**
+ * Create a write stream (in append mode)
+ */
+var accessLogStream = fs.createWriteStream(__dirname + '/' + config.logger.dirname + '/' + config.logger.filename, {
+	flags: 'a'
+});
+
+/**
+ * Setup the logger
+ */
+app.use(morgan('combined', {
+	stream: accessLogStream
+}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -22,9 +37,8 @@ switch (NODE_ENV.toLowerCase()) {
 		/**
 		 * Application configurations for development environment.
 		 * NODE_ENV=development node server.js
-		 ***/
+		 */
 		app.set('port', process.env.PORT || config.server.dev.port);
-		app.use(logger(config.server.dev.NODE_ENV));
 		app.use(express.static(path.join(__dirname, config.server.dev.codebase)));
 		break;
 
@@ -32,9 +46,8 @@ switch (NODE_ENV.toLowerCase()) {
 		/**
 		 * Application configurations for production environment.
 		 * NODE_ENV=production node server.js
-		 ***/
+		 */
 		app.set('port', process.env.PORT || config.server.prod.port);
-		app.use(logger(config.server.prod.NODE_ENV));
 		app.use(express.static(path.join(__dirname, config.server.prod.codebase)));
 		break;
 }

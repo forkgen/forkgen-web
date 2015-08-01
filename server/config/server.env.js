@@ -19,5 +19,9 @@ module.exports = {
 		"defaults": {
 			"version": "v1"
 		}
+	},
+	"logger": {
+		"dirname": "logs",
+		"filename": "access.log"
 	}
 };
