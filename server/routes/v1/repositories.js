@@ -2,7 +2,9 @@
 
 var express = require('express');
 var router = express.Router();
-var nodegit = require('nodegit');
+
+var nodegit = require('../../config/npm.config').nodegit,
+	joi = require('../../config/npm.config').joi;
 
 router.post('/clone/:username', function(req, res, next) {
 	var reqBody = req.body;
@@ -12,7 +14,7 @@ router.post('/clone/:username', function(req, res, next) {
 			"status": "done"
 		});
 	});
-	
+
 });
 
 module.exports = router;
