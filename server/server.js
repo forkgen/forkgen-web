@@ -11,7 +11,8 @@ var express = require('express'),
 var PRODUCT = require('../package.json'),
 	CONFIG = require("./config/server.env");
 
-var app = express();
+var app = express(),
+	router = express.Router();
 
 /**
  * Create a write stream (in append mode)
@@ -29,7 +30,7 @@ app.use(morgan('combined', {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+	extended: false
 }));
 app.use(cookieParser());
 app.set('trust proxy', function(ip) {
