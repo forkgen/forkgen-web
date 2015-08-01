@@ -1,16 +1,31 @@
 {
   "name": "forkgen",
   "version": "0.0.0",
-  "private": true,
+  "description": "A web (localhost) based open source tool for GUI for Git that allows you control Git without using the command line.",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hegdeashwin/forkgen"
+  },
+  "keywords": [
+    "Git"
+  ],
+  "author": "Ashwin Hegde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hegdeashwin/forkgen/issues"
+  },
+  "homepage": "https://github.com/hegdeashwin/forkgen",
   "dependencies": {
     "body-parser": "~1.13.2",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "express": "~4.13.1",
     "less-middleware": "1.0.x",
-    "morgan": "~1.6.1"
+    "morgan": "~1.6.1",
+    "nodegit": "^0.4.1",
+    "shelljs": "^0.5.1"
   }
 }
