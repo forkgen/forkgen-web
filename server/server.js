@@ -8,13 +8,15 @@ var express = require('express'),
 	http = require('http'),
 	fs = require('fs');
 
-var app = express(),
-	config = require("./config/server.env");
+var PRODUCT = require('../package.json'),
+	CONFIG = require("./config/server.env");
+
+var app = express();
 
 /**
  * Create a write stream (in append mode)
  */
-var accessLogStream = fs.createWriteStream(__dirname + '/' + config.logger.dirname + '/' + config.logger.filename, {
+var accessLogStream = fs.createWriteStream(__dirname + '/' + CONFIG.logger.dirname + '/' + CONFIG.logger.filename, {
 	flags: 'a'
 });
 
@@ -30,30 +32,35 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(cookieParser());
+app.set('trust proxy', function(ip) {
+	return (ip === '127.0.0.1') ? true : false;
+});
 
-var NODE_ENV = process.env.NODE_ENV || config.server.dev.NODE_ENV;
+var NODE_ENV = process.env.NODE_ENV || CONFIG.server.dev.NODE_ENV;
 switch (NODE_ENV.toLowerCase()) {
-	case config.server.dev.NODE_ENV.toLowerCase():
+	case CONFIG.server.dev.NODE_ENV.toLowerCase():
 		/**
 		 * Application configurations for development environment.
 		 * NODE_ENV=development node server.js
 		 */
-		app.set('port', process.env.PORT || config.server.dev.port);
-		app.use(express.static(path.join(__dirname, config.server.dev.codebase)));
+		app.set('port', process.env.PORT || CONFIG.server.dev.port);
+		app.set('uri', CONFIG.server.dev.ip);
+		app.use(express.static(path.join(__dirname, CONFIG.server.dev.codebase)));
 		break;
 
-	case config.server.prod.NODE_ENV.toLowerCase():
+	case CONFIG.server.prod.NODE_ENV.toLowerCase():
 		/**
 		 * Application configurations for production environment.
 		 * NODE_ENV=production node server.js
 		 */
-		app.set('port', process.env.PORT || config.server.prod.port);
-		app.use(express.static(path.join(__dirname, config.server.prod.codebase)));
+		app.set('port', process.env.PORT || CONFIG.server.prod.port);
+		app.set('uri', CONFIG.server.prod.ip);
+		app.use(express.static(path.join(__dirname, CONFIG.server.prod.codebase)));
 		break;
 }
 
-app.use('/api/' + config.api.defaults.version + '/repository', require('./routes/' + config.api.defaults.version + '/repositories'));
+app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/repositories'));
 
 http.createServer(app).listen(app.get('port'), function() {
-	console.log("\n\n\tNode (Express) server listening on port " + app.get('port'));
+	console.log('\n\n\t %s v%s is listening on server %s:%s', PRODUCT.name, PRODUCT.version, app.get('uri'), app.get('port'));
 });
