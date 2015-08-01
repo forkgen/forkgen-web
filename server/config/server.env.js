@@ -5,15 +5,19 @@ module.exports = {
 		"dev": {
 			"port": "9000",
 			"uri": "localhost",
-			"codebase": "../client"
+			"codebase": "../client",
+			"NODE_ENV": "development"
 		},
 		"prod": {
 			"port": "8000",
 			"uri": "localhost",
-			"codebase": "../client/prod"
+			"codebase": "../client/prod",
+			"NODE_ENV": "production"
 		}
 	},
 	"api": {
-		"v1": "v1"
+		"defaults": {
+			"version": "v1"
+		}
 	}
 };
