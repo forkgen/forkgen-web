@@ -1,67 +1,50 @@
 'use strict';
 
-var express = require('express'),
-	morgan = require('morgan'),
-	cookieParser = require('cookie-parser'),
-	bodyParser = require('body-parser'),
-	path = require('path'),
-	http = require('http'),
-	fs = require('fs');
-
-var PRODUCT = require('../package.json'),
-	CONFIG = require("./config/server.env");
-
-var app = express(),
-	router = express.Router();
+var http = require('http'),
+	app = require('./app'),
+	PRODUCT = require('../package.json');
 
 /**
- * Create a write stream (in append mode)
+ * Create HTTP server.
  */
-var accessLogStream = fs.createWriteStream(__dirname + '/' + CONFIG.logger.dirname + '/' + CONFIG.logger.filename, {
-	flags: 'a'
-});
+var server = http.createServer(app);
 
 /**
- * Setup the logger
+ * Listen on provided port, on all network interfaces.
  */
-app.use(morgan('combined', {
-	stream: accessLogStream
-}));
+server.listen(app.get('port'));
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-	extended: false
-}));
-app.use(cookieParser());
-app.set('trust proxy', function(ip) {
-	return (ip === '127.0.0.1') ? true : false;
-});
+server.on('error', onError);
+server.on('listening', onListening);
 
-var NODE_ENV = process.env.NODE_ENV || CONFIG.server.dev.NODE_ENV;
-switch (NODE_ENV.toLowerCase()) {
-	case CONFIG.server.dev.NODE_ENV.toLowerCase():
-		/**
-		 * Application configurations for development environment.
-		 * NODE_ENV=development node server.js
-		 */
-		app.set('port', process.env.PORT || CONFIG.server.dev.port);
-		app.set('uri', CONFIG.server.dev.ip);
-		app.use(express.static(path.join(__dirname, CONFIG.server.dev.codebase)));
-		break;
+/**
+ * Event listener for HTTP server 'error' event.
+ */
+function onError(error) {
+	if (error.syscall !== 'listen') {
+		throw error;
+	}
 
-	case CONFIG.server.prod.NODE_ENV.toLowerCase():
-		/**
-		 * Application configurations for production environment.
-		 * NODE_ENV=production node server.js
-		 */
-		app.set('port', process.env.PORT || CONFIG.server.prod.port);
-		app.set('uri', CONFIG.server.prod.ip);
-		app.use(express.static(path.join(__dirname, CONFIG.server.prod.codebase)));
-		break;
+	/**
+	 * Handle specific listen errors with friendly message.
+	 */
+	switch (error.code) {
+		case 'EACCES':
+			console.error('Requires elevated privileges');
+			process.exit(1);
+			break;
+		case 'EADDRINUSE':
+			console.error('Port is already in use');
+			process.exit(1);
+			break;
+		default:
+			throw error;
+	}
 }
 
-app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/repositories'));
-
-http.createServer(app).listen(app.get('port'), function() {
+/**
+ * Event listener for HTTP server 'listening' event.
+ */
+function onListening() {
 	console.log('\n\n\t %s v%s is listening on server %s:%s', PRODUCT.name, PRODUCT.version, app.get('uri'), app.get('port'));
-});
+}
