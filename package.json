@@ -10,7 +10,10 @@
     "url": "https://github.com/hegdeashwin/forkgen"
   },
   "keywords": [
-    "Git"
+    "Git",
+    "Github",
+    "versioning",
+    "distributed"
   ],
   "author": "Ashwin Hegde",
   "license": "MIT",
