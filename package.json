@@ -10,7 +10,10 @@
     "url": "https://github.com/hegdeashwin/forkgen"
   },
   "keywords": [
-    "Git"
+    "Git",
+    "Github",
+    "versioning",
+    "distributed"
   ],
   "author": "Ashwin Hegde",
   "license": "MIT",
@@ -28,5 +31,10 @@
     "morgan": "~1.6.1",
     "nodegit": "^0.4.1",
     "shelljs": "^0.5.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-util": "^3.0.6"
   }
 }
