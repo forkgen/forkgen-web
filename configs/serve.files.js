@@ -5,7 +5,7 @@ module.exports = {
 		"html": {
 			"gateway": {
 				"src": ["./client/*.html"]
-			}
+			},
 			"templates": {
 				"src": ["./client/app/**/*.html", "./client/components/**/*.html"]
 			}
