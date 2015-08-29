@@ -69,7 +69,7 @@
 					}
 				},
 				"jscs": {
-					"disallowMultipleVarDecl": true,
+					"disallowMultipleVarDecl": false,
 					"disallowSpacesInsideObjectBrackets": true
 				}
 			}
