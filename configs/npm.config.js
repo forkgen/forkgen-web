@@ -8,6 +8,8 @@
  *
  */
 
+'use strict';
+
 /**
  * nodegit: Native Node bindings to Git.
  *
