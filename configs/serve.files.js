@@ -21,7 +21,7 @@ module.exports = {
 		},
 		"sass": {
 			"src": ["./client/stylesheets/less/_consolidate.less"],
-			"dest": ["./client/stylesheets/css/"]
+			"dest": "./client/stylesheets/css/"
 		}
 	}
 };
