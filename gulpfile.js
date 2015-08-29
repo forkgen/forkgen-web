@@ -10,7 +10,11 @@
 		jscs = require('gulp-jscs'),
 		jshint = require('gulp-jshint'),
 		jsonlint = require("gulp-jsonlint"),
-		less = require('gulp-less');
+		less = require('gulp-less'),
+		browserify = require('browserify'),
+		source = require('vinyl-source-stream'),
+		buffer = require('vinyl-buffer');
+
 
 	/**
 	 * Require built-in `configure files`.
@@ -77,6 +81,18 @@
 	});
 
 	/**
+	 * Setup browserify task.
+	 */
+	gulp.task('browserify', function() {
+		return browserify(SERVE_FILES.path.browserify.src)
+			.bundle()
+			.pipe(source('main.js'))
+			.pipe(buffer())
+			.on('error', util.log)
+			.pipe(gulp.dest(SERVE_FILES.path.browserify.dest));
+	});
+
+	/**
 	 * Define `default` task
 	 * 1. Linting of html, templates, json, js, css.
 	 * 2. Compilation of less files.
@@ -88,7 +104,7 @@
 	 * 1. Default.
 	 * 2. Minification, optimization & build creation.
 	 */
-	gulp.task('build', ['default']);
+	gulp.task('build', ['default', 'browserify']);
 
 	/**
 	 * Define `linthtml` task

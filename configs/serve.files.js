@@ -23,6 +23,10 @@
 			"sass": {
 				"src": ["./client/stylesheets/less/_consolidate.less"],
 				"dest": "./client/stylesheets/css/"
+			},
+			"browserify": {
+				"src": "./client/app/forkgen.js",
+				"dest": "./client-prod/app/"
 			}
 		}
 	};
