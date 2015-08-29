@@ -7,7 +7,7 @@ var express = require('express'),
 	path = require('path'),
 	fs = require('fs');
 
-var CONFIG = require("./config/server.env");
+var CONFIG = require("../configs/server.env");
 
 var app = express(),
 	router = express.Router();

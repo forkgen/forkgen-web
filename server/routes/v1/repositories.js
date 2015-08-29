@@ -3,8 +3,8 @@
 var express = require('express');
 var router = express.Router();
 
-var nodegit = require('../../config/npm.config').nodegit,
-	joi = require('../../config/npm.config').joi;
+var nodegit = require('../../../configs/npm.config').nodegit,
+	joi = require('../../../configs/npm.config').joi;
 
 router.post('/clone/:username', function(req, res, next) {
 	var reqBody = req.body;
