@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="override.css" />
     <link rel="stylesheet" href="common.css" />
     <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="components.css" />
   </head>
   <body>
 
@@ -142,35 +143,126 @@
                 <div class="statistics-container">
 
                   <div class="row">
-                    <div class="col-md-6">
-                      <div class="panel panel-default">
+                    <div class="col-md-9">
+                      <div class="panel panel-default projects-container">
                         <div class="panel-heading">
-                          <div class="btn-group panel-btn-group pull-right" role="group" aria-label="...">
-                            <button type="button" class="btn btn-sm btn-default" title="Setting"><i class="fa fa-lg fa-cog"></i></button>
-                            <button type="button" class="btn btn-sm btn-default" title="Help"><i class="fa fa-lg fa-question-circle"></i></button>
-                            <button type="button" class="btn btn-sm btn-default" title="Minimize"><i class="fa fa-lg fa-minus-circle"></i></button>
+                          <h3 class="panel-title">Projects</h3>
+                        </div>
+                        <div class="panel-body">
+
+                          <div class="media project-container">
+                            <div class="media-left">
+                              <a href="#">
+                                <i class="fa fa-github fa-4x"></i>
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <div class="col-md-8">
+                                <h4 class="media-heading"><a href="#">Protocore</a> <a target="_blank" href="//github.com/hegdeashwin/Protocore" title="Visit: github.com/hegdeashwin/Protocore"></a></h4>
+                                <p>Repository: <a target="_blank" href="//github.com/hegdeashwin/Protocore">github.com/hegdeashwin/Protocore</a></p>
+                                <p>Tags:
+                                  <span class="label label-success">HTML</span>
+                                  <span class="label label-success">CSS</span>
+                                  <span class="label label-success">JavaScript</span>
+                                  <span class="label label-success">Python</span>
+                                  <span class="label label-success">PHP</span>
+                                  <span class="label label-success">Ruby</span>
+                                </p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="pull-right">
+                                  <a target="_blank" title="Visit Repository" href="#" class="btn btn-sm btn-default"><i class="fa fa-lg fa-external-link"></i></a>
+                                  <a target="_blank" title="View Project Settings" href="#" class="btn btn-sm btn-primary"><i class="fa fa-lg fa-cogs"></i></a>
+                                  <a title="Delete Project" href="#" class="btn btn-sm btn-danger"><i class="fa fa-lg fa-trash-o"></i></a>
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <h3 class="panel-title">Panel Title</h3>
+                          <hr/>
+                          <div class="media project-container">
+                            <div class="media-left">
+                              <a href="#">
+                                <i class="fa fa-bitbucket fa-4x"></i>
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <div class="col-md-8">
+                                <h4 class="media-heading"><a href="#">Nebula</a> <a target="_blank" href="//github.com/hegdeashwin/Nebula" title="Visit: github.com/hegdeashwin/Nebula"></a></h4>
+                                <p>Repository: <a target="_blank" href="//github.com/hegdeashwin/Nebula">github.com/hegdeashwin/Nebula</a></p>
+                                <p>Tags:
+                                  <span class="label label-success">HTML</span>
+                                  <span class="label label-success">CSS</span>
+                                  <span class="label label-success">JavaScript</span>
+                                  <span class="label label-success">Ruby</span>
+                                </p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="pull-right">
+                                  <a target="_blank" title="Visit Repository" href="#" class="btn btn-sm btn-default"><i class="fa fa-lg fa-external-link"></i></a>
+                                  <a target="_blank" title="View Project Settings" href="#" class="btn btn-sm btn-primary"><i class="fa fa-lg fa-cogs"></i></a>
+                                  <a title="Delete Project" href="#" class="btn btn-sm btn-danger"><i class="fa fa-lg fa-trash-o"></i></a>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="media project-container">
+                            <div class="media-left">
+                              <a href="#">
+                                <i class="fa fa-git fa-4x"></i>
+                              </a>
+                            </div>
+                            <div class="media-body">
+                              <div class="col-md-8">
+                                <h4 class="media-heading"><a href="#">Boneloop</a> <a target="_blank" href="//github.com/hegdeashwin/Boneloop" title="Visit: github.com/hegdeashwin/Boneloop"></a></h4>
+                                <p>Repository: <a target="_blank" href="//github.com/hegdeashwin/Boneloop">github.com/hegdeashwin/Nebula</a></p>
+                                <p>Tags:
+                                  <span class="label label-success">HTML</span>
+                                  <span class="label label-success">CSS</span>
+                                  <span class="label label-success">JavaScript</span>
+                                  <span class="label label-success">Ruby</span>
+                                </p>
+                              </div>
+                              <div class="col-md-4">
+                                <p class="pull-right">
+                                  <a target="_blank" title="Visit Repository" href="#" class="btn btn-sm btn-default"><i class="fa fa-lg fa-external-link"></i></a>
+                                  <a target="_blank" title="View Project Settings" href="#" class="btn btn-sm btn-primary"><i class="fa fa-lg fa-cogs"></i></a>
+                                  <a title="Delete Project" href="#" class="btn btn-sm btn-danger"><i class="fa fa-lg fa-trash-o"></i></a>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
-                        <div class="panel-body">
-                          Panel content
+                        <div class="panel-footer">
+                          <nav>
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                          </nav>
                         </div>
                       </div>
                     </div>
+
+
                     <div class="col-md-3">
                       <div class="panel panel-default">
                         <div class="panel-heading">
-                          <h3 class="panel-title">Instance</h3>
-                        </div>
-                        <div class="panel-body">
-                          Panel content
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-3">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">Panel title</h3>
+                          <h3 class="panel-title">Activities</h3>
                         </div>
                         <div class="panel-body">
                           Panel content
@@ -178,43 +270,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="row">
-                    <div class="col-md-6">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">Panel title</h3>
-                        </div>
-                        <div class="panel-body">
-                          Panel content
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">Panel title</h3>
-                        </div>
-                        <div class="panel-body">
-                          Panel content
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <h3 class="panel-title">Panel title</h3>
-                        </div>
-                        <div class="panel-body">
-                          Panel content
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
 
