@@ -38,6 +38,10 @@
   margin: -6px 0px 0 5px;
 }
 
+.breadcrumb {
+    font-size: 16px;
+}
+
 footer .navbar {
   border: 0px;
   box-shadow: none;
