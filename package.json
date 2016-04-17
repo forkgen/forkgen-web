@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "description": "A web (localhost) based open source tool for GUI for Git that allows you control Git without using the command line.",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "dev": "webpack -d --watch",
+    "build": "webpack -p"
   },
   "repository": {
     "type": "git",
@@ -63,6 +65,7 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "html-webpack-plugin": "^2.15.0",
-    "jest": "^0.1.40"
+    "jest": "^0.1.40",
+    "url-loader": "^0.5.7"
   }
 }
