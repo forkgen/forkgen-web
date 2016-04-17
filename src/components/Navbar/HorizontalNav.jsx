@@ -69,39 +69,12 @@ class HorizontalMenu extends React.Component {
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
                 <i className="fa fa-bars fa-lg"></i>
               </button>
-              <IndexLink to="/" className="navbar-brand" title="Elastic Hub v0.0.0 Alpha">Elastic Hub <sup><small>v0.0.0 Alpha</small></sup></IndexLink>
+              <IndexLink to="/" className="navbar-brand" title="Forkgen v0.0.0 Alpha">Forkgen <sup><small>v0.0.0 Alpha</small></sup></IndexLink>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
               <ul className="nav navbar-nav">
                 <li title="Home"><IndexLink to="/"><i className="fa fa-lg fa-home"></i></IndexLink></li>
-                <li className="dropdown">
-                  <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="Views"><i className="fa fa-eye fa-lg"></i> View<span className="caret"></span></a>
-                  <ul className="dropdown-menu">
-                    <li title="Cluster"><IndexLink to="/">Cluster</IndexLink></li>
-                    <li title="Nodes"><Link to="/nodes">Nodes</Link></li>
-                    <li title="Indices"><Link to="/indices">Indices</Link></li>
-                  </ul>
-                </li>
-                <li className="dropdown">
-                  <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="Tools"><i className="fa fa-wrench fa-lg"></i> Tools<span className="caret"></span></a>
-                  <ul className="dropdown-menu">
-                    <li title="Queries"><Link to="/queries">Queries</Link></li>
-                    <li title="REST Request"><Link to="/restapi">REST Request</Link></li>
-                    <li className="divider"></li>
-                    <li title="Settings"><Link to="/settings">Settings</Link></li>
-                  </ul>
-                </li>
               </ul>
-              <form className="navbar-form navbar-left" role="search">
-                <div className="form-group">
-                  <div className="input-group">
-                    <input type="text" className="form-control" placeholder="Enter cluster URL" defaultValue="localhost:9200" />
-                    <span className="input-group-btn">
-                      <button className="btn btn-primary" type="button" title="Connect">Connect</button>
-                    </span>
-                  </div>
-                </div>
-              </form>
               <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
                   <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="More Information, Help etc.">
@@ -109,7 +82,7 @@ class HorizontalMenu extends React.Component {
                   </a>
                   <ul className="dropdown-menu">
                     <li title="Documentation">
-                      <a href="//github.com/hegdeashwin/elastic-hub/wiki" target="_blank">Documentation</a>
+                      <a href="//github.com/hegdeashwin/forkgen/wiki" target="_blank">Documentation</a>
                     </li>
                   </ul>
                 </li>
@@ -117,25 +90,25 @@ class HorizontalMenu extends React.Component {
                   <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="Developers Connection"><i className="fa fa-connectdevelop fa-lg"></i> Developers<span className="caret"></span></a>
                   <ul className="dropdown-menu">
                     <li title="Github Home Page">
-                      <a href="//github.com/hegdeashwin/elastic-hub" target="_blank">Github Home Page</a>
+                      <a href="//github.com/hegdeashwin/forkgen" target="_blank">Github Home Page</a>
                     </li>
                     <li className="divider"></li>
                     <li title="Release Page">
-                      <a href="//github.com/hegdeashwin/elastic-hub/releases" target="_blank">Release Page</a>
+                      <a href="//github.com/hegdeashwin/forkgen/releases" target="_blank">Release Page</a>
                     </li>
                     <li title="Milestones">
-                      <a href="//github.com/hegdeashwin/elastic-hub/milestones" target="_blank">Milestones</a>
+                      <a href="//github.com/hegdeashwin/forkgen/milestones" target="_blank">Milestones</a>
                     </li>
                     <li className="divider"></li>
                     <li title="Report Issues">
-                      <a href="//github.com/hegdeashwin/elastic-hub/issues" target="_blank">Report Issues</a>
+                      <a href="//github.com/hegdeashwin/forkgen/issues" target="_blank">Report Issues</a>
                     </li>
                     <li title="Pull Requests">
-                      <a href="//github.com/hegdeashwin/elastic-hub/pulls" target="_blank">Open Pull Requests</a>
+                      <a href="//github.com/hegdeashwin/forkgen/pulls" target="_blank">Open Pull Requests</a>
                     </li>
                     <li className="divider"></li>
-                    <li title="About Elastic Hub">
-                      <a href="//github.com/hegdeashwin/elastic-hub" target="_blank">About Elastic Hub</a>
+                    <li title="About Forkgen">
+                      <a href="//github.com/hegdeashwin/forkgen" target="_blank">About Forkgen</a>
                     </li>
                   </ul>
                 </li>
