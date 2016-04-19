@@ -46,7 +46,11 @@
     "react-router": "^2.2.4",
     "react-ace": "^3.2.0",
     "react-data-grid": "^0.14.26",
-    "react-select": "^1.0.0-beta12"
+    "react-select": "^1.0.0-beta12",
+    "react-redux": "^4.4.5",
+    "redux": "^3.4.0",
+    "node-dir": "^0.1.10",
+    "nodemailer": "^1.4.0"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
