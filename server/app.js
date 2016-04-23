@@ -58,6 +58,6 @@ switch (NODE_ENV.toLowerCase()) {
 		break;
 }
 
-app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/repositories'));
+app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/init'));
 
 module.exports = app;
