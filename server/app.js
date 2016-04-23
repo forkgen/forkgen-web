@@ -59,5 +59,6 @@ switch (NODE_ENV.toLowerCase()) {
 }
 
 app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/init'));
+app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/clone'));
 
 module.exports = app;
