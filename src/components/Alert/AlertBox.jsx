@@ -52,7 +52,7 @@ class AlertBox extends React.Component {
       <div className={alertClassNames} id="alert-box">
         {closeButton}
         {hasMsgTitle}
-        {hasMsg}
+        {this.props.children}
       </div>
     );
   }

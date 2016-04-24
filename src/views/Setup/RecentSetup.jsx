@@ -2,26 +2,23 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import AlertBox from '../../components/Alert/AlertBox.jsx';
 
 class RecentSetup extends React.Component {
   render() {
     return (
       <div className="media project-container">
         <div className="media-body">
-          <div className="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <h4>Protocore</h4>
-            <p>Change this and that and try attis consectetur puruasd asd asd ads sit amet fermentum.</p>
-            <p>
-              <button type="button" className="btn btn-warning">Open</button>
-              <button type="button" className="btn btn-danger">Remove</button>
-            </p>
-          </div>
-          <div className="alert alert-warning alert-dismissible fade in" role="alert"> <button type="button" className="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button> <h4>Protocore</h4>
-            <p>Change this and that and try attis consectetur puruasd asd asd ads sit amet fermentum.</p>
-            <p>
-              <button type="button" className="btn btn-warning">Open</button>
-              <button type="button" className="btn btn-danger">Remove</button>
-            </p>
-          </div>
+          <AlertBox type="info" canClose="true">
+            <a className="lead" href="https://github.com/Protocore-UI/Protocore" target="_blank"><i className="fa fa-github fa-lg"></i> Protocore</a>
+            <h5>Protocore is an open source walking application skeleton ...</h5>
+            <button type="button" className="btn btn-sm btn-success">Open</button>
+          </AlertBox>
+          <AlertBox type="info" canClose="true">
+            <a className="lead" href="https://github.com/Nebula-UI/Nebula" target="_blank">Nebula</a>
+            <h5>Nebula is an open source walking application skeleton ...</h5>
+            <button type="button" className="btn btn-sm btn-success">Open</button>
+          </AlertBox>
         </div>
       </div>
     );
