@@ -9,10 +9,13 @@ class Initialize extends React.Component {
       <div className="media project-container">
         <div className="media-body">
           <form>
-              <div className="form-group">
-                <label for="cloneFromGit">Workspace location</label>
-                <input type="text" className="form-control" placeholder="E.g. C:\Workspace"/>
-              </div>
+            <label for="createRepository">Specify repository location</label>
+            <p className="input-group">
+              <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
+              <span className="input-group-btn">
+                <button className="btn btn-success" type="button">Create</button>
+              </span>
+            </p>
           </form>
         </div>
       </div>
