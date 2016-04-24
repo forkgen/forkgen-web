@@ -37,13 +37,19 @@ class PanelBox extends React.Component {
       'fa-lg': true
     };
 
+    let panelTypeClassName = {
+      'panel': true
+    };
+
     toggleCollapseButtonIcon[this.state.isCollapseIcon] = true;
+    panelTypeClassName[this.props.type] = true;
 
     panelBodyClassName = classNames(panelBodyClassName);
     toggleCollapseButtonIcon = classNames(toggleCollapseButtonIcon);
+    panelTypeClassName = classNames(panelTypeClassName);
 
     return (
-      <div className="panel panel-default">
+      <div className={panelTypeClassName}>
         <div className="panel-heading" onDoubleClick={this.toggleCollapse}>
           <span className="panel-title" dangerouslySetInnerHTML={{__html: this.props.title}}></span>
           <div className="panel-toolbar btn-group pull-right">

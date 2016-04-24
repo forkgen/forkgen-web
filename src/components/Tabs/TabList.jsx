@@ -64,7 +64,7 @@ class TabList extends React.Component {
     } else if(URLHash.indexOf('restapi') !== -1) {
       return (isTabLink) ? document.getElementById('restapi-tab') : document.getElementById('restapi');
     } else {
-      return (isTabLink) ? document.getElementById('cluster-tab') : document.getElementById('cluster');
+      return (isTabLink) ? document.getElementById('setup-tab') : document.getElementById('setup');
     }
   };
 
@@ -72,7 +72,7 @@ class TabList extends React.Component {
     return (
       <ul id="super-tab" className="nav nav-tabs super-tab-component">
         <li className="active">
-          <Link to="/cluster" id="cluster-tab" data-toggle="tab"><i className="fa fa-server fa-lg"></i> Cluster</Link>
+          <Link to="/setup" id="setup-tab" data-toggle="tab"><i className="fa fa-server fa-lg"></i> Project Setup</Link>
         </li>
         <li>
           <Link to="/nodes" id="nodes-tab" data-toggle="tab"><i className="fa fa-cubes fa-lg"></i> Nodes</Link>
