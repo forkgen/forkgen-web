@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Initialize extends React.Component {
+class OpenExist extends React.Component {
   render() {
     return (
       <div className="media project-container">
@@ -13,7 +13,7 @@ class Initialize extends React.Component {
             <p className="input-group">
               <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
               <span className="input-group-btn">
-                <button className="btn btn-success" type="button">Create</button>
+                <button className="btn btn-success" type="button">Open</button>
               </span>
             </p>
           </form>
@@ -23,4 +23,4 @@ class Initialize extends React.Component {
   }
 }
 
-export default Initialize;
+export default OpenExist;
