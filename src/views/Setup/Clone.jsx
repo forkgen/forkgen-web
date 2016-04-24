@@ -1,41 +1,32 @@
 'use strict';
 
 import React from 'react';
-import TileCounterStyle from './TileCounter.less'
+import ReactDOM from 'react-dom';
 
-class TileCounter extends React.Component {
+class Clone extends React.Component {
   render() {
     return (
-      <div className="panel panel-default text-center tile-stats-count">
-        <div className="panel-body">
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Nodes</strong></span>
-            <div className="count">1</div>
-          </div>
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Data Nodes</strong></span>
-            <div className="count">1</div>
-          </div>
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Pending Tasks</strong></span>
-            <div className="count">3</div>
-          </div>
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Indices</strong></span>
-            <div className="count">1</div>
-          </div>
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Documents</strong></span>
-            <div className="count">1</div>
-          </div>
-          <div className="col-md-2">
-            <span className="count-title text-muted"><strong>Total Size</strong></span>
-            <div className="count">350 KB</div>
+      <div className="media project-container">
+        <div className="media-body">
+          <div className="media project-container">
+            <div className="media-left">
+              <a href="#">
+                <i className="fa fa-github fa-4x"></i>
+              </a>
+            </div>
+            <div className="media-body">
+              <form>
+                  <div className="form-group">
+                    <label for="cloneFromGithub">Clone from Github</label>
+                    <input type="text" className="form-control" placeholder="E.g. hegdeashwin/alphonso.git"/>
+                  </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     );
   }
-};
+}
 
-export default TileCounter;
+export default Clone;

@@ -1,33 +1,35 @@
 'use strict';
 
 import React from 'react';
-import AlertBox from '../../components/Alert/AlertBox.jsx';
 import PanelBox from '../../components/Panel/PanelBox.jsx';
-import TileCounter from './TileCounter.jsx';
-import ShardsStatistics from './ShardsStatistics.jsx';
+import Initialize from './Initialize.jsx';
+import Clone from './Clone.jsx';
+import RecentSetup from './RecentSetup.jsx';
 
-class ClusterTabPane extends React.Component {
+class ProjectSetupTabPane extends React.Component {
   render() {
     return (
-      <div className="clusters-container">
-        <AlertBox type="warning" msg="<i class='fa fa-heartbeat fa-lg'></i> Cluster '<strong>es-demo</strong>' status is '<strong>Yellow</strong>'. The primary shard is allocated but replicas are not." canClose="false" />
+      <div className="project-setup-container">
 
         <div className="row">
-          <div className="col-md-12">
-            <TileCounter />
+          <div className="col-md-6">
+            <PanelBox title="Clone a repository" hasToolbar="true" type="panel-primary">
+              <Clone/>
+            </PanelBox>
+            <PanelBox title="Initialize a repository" hasToolbar="true" type="panel-primary">
+              <Initialize/>
+            </PanelBox>
           </div>
-        </div>
-
-        <div className="row">
-          <div className="col-md-12">
-            <PanelBox title="<i class='fa fa-lg fa-pie-chart'></i> Shards Statistics" hasToolbar="true">
-              <ShardsStatistics/>
+          <div className="col-md-6">
+            <PanelBox title="Recent repository" hasToolbar="true" type="panel-primary">
+              <RecentSetup/>
             </PanelBox>
           </div>
         </div>
+
       </div>
     );
   }
 };
 
-export default ClusterTabPane;
+export default ProjectSetupTabPane;
