@@ -14,13 +14,13 @@ class AlertBox extends React.Component {
     this.closeAlertBox = this.closeAlertBox.bind(this);
   };
 
-  closeAlertBox() {
-    let alertBox = document.getElementById('alert-box')
-    ReactDOM.findDOMNode(alertBox).style.display = 'none';
+  closeAlertBox(e) {
+    ReactDOM.findDOMNode(e.target).parentNode.parentNode.style.display = 'none';
   };
 
   render() {
     let alertClassNames = {
+      'alert-box': true,
       'alert': true,
       'alert-dismissible': true,
       'fade': true,
@@ -38,20 +38,9 @@ class AlertBox extends React.Component {
       closeButton = <button type="button" className="close" onClick={this.closeAlertBox}><i className="fa fa-times"></i></button>;
     }
 
-    let hasMsgTitle = '';
-    if(this.props.msgTitle) {
-      hasMsgTitle = <h4 dangerouslySetInnerHTML={{__html: this.props.msgTitle}} />;
-    }
-
-    let hasMsg = '';
-    if(this.props.msg) {
-      hasMsg = <p dangerouslySetInnerHTML={{__html: this.props.msg}} />;
-    }
-
     return (
-      <div className={alertClassNames} id="alert-box">
+      <div className={alertClassNames}>
         {closeButton}
-        {hasMsgTitle}
         {this.props.children}
       </div>
     );
