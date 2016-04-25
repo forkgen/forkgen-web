@@ -11,30 +11,30 @@ class RecentSetup extends React.Component {
     return (
       <div className="media recent-setup-container">
         <div className="media-body">
-          <AlertBox type="info" canClose="true">
-            <a className="lead" href="https://github.com/Protocore-UI/Protocore" target="_blank"><i className="fa fa-github fa-lg"></i> Protocore</a>
-            <h5>Protocore is an open source walking application skeleton ...</h5>
-            <button type="button" className="btn btn-sm btn-success">Open</button>
+          <AlertBox type="info" canClose="false">
+            <span className="lead"><i className="fa fa-github fa-lg"></i> Protocore</span>
+            <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
+            <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
           </AlertBox>
-          <AlertBox type="info" canClose="true">
-            <a className="lead" href="https://github.com/Nebula-UI/Nebula" target="_blank">Nebula</a>
-            <h5>Nebula is an open source walking application skeleton ...</h5>
-            <button type="button" className="btn btn-sm btn-success">Open</button>
+          <AlertBox type="info" canClose="false">
+            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
+              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
+              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
           </AlertBox>
-          <AlertBox type="info" canClose="true">
-            <a className="lead" href="https://github.com/Nebula-UI/Nebula" target="_blank">Nebula</a>
-            <h5>Nebula is an open source walking application skeleton ...</h5>
-            <button type="button" className="btn btn-sm btn-success">Open</button>
+          <AlertBox type="info" canClose="false">
+            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
+              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
+              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
           </AlertBox>
-          <AlertBox type="info" canClose="true">
-            <a className="lead" href="https://github.com/Nebula-UI/Nebula" target="_blank">Nebula</a>
-            <h5>Nebula is an open source walking application skeleton ...</h5>
-            <button type="button" className="btn btn-sm btn-success">Open</button>
+          <AlertBox type="info" canClose="false">
+            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
+              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
+              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
           </AlertBox>
-          <AlertBox type="info" canClose="true">
-            <a className="lead" href="https://github.com/Nebula-UI/Nebula" target="_blank">Nebula</a>
-            <h5>Nebula is an open source walking application skeleton ...</h5>
-            <button type="button" className="btn btn-sm btn-success">Open</button>
+          <AlertBox type="info" canClose="false">
+            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
+              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
+              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
           </AlertBox>
         </div>
       </div>
