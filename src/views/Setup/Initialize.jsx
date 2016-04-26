@@ -9,13 +9,18 @@ class Initialize extends React.Component {
       <div className="media project-container">
         <div className="media-body">
           <form>
-            <label for="createRepository">Specify repository location</label>
-            <p className="input-group">
+            <div className="checkbox">
+              <label>
+                <input type="checkbox" /> Check incase you want to create bare repository.
+              </label>
+            </div>
+            <label for="createRepository">Specify repository location:</label>
+            <div className="input-group">
               <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
               <span className="input-group-btn">
                 <button className="btn btn-success" type="button" title="Create new respository"><i className="fa fa-plus-square-o fa-lg"></i> Create</button>
               </span>
-            </p>
+            </div>
           </form>
         </div>
       </div>
