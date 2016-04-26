@@ -10,12 +10,9 @@ class Clone extends React.Component {
         <div className="media-body">
           <div className="media project-container">
             <form>
-              <div className="media-left">
-                <i className="fa fa-github fa-4x"></i>
-              </div>
               <div className="media-body">
                 <p class="form-group">
-                  <label for="createRepository">Clone from Github remote repository</label>
+                  <label for="createRepository">Clone from Github/Gitlab/BitBucket remote repository</label>
                   <input type="text" className="form-control" placeholder="E.g. https://github.com/hegdeashwin/forkgen.git" />
                 </p>
                 <p class="form-group">
@@ -23,7 +20,7 @@ class Clone extends React.Component {
                   <div className="input-group">
                     <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
                     <span className="input-group-btn">
-                      <button className="btn btn-success" type="button">Clone</button>
+                      <button className="btn btn-success" type="button" title="Clone from Github remote repository"><i className="fa fa-clone fa-lg"></i> Clone</button>
                     </span>
                   </div>
                 </p>
