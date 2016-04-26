@@ -12,29 +12,40 @@ class RecentSetup extends React.Component {
       <div className="media recent-setup-container">
         <div className="media-body">
           <AlertBox type="info" canClose="false">
-            <span className="lead"><i className="fa fa-github fa-lg"></i> Protocore</span>
-            <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
-            <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
+            <div className="media">
+              <div className="media-left remote-repo-logo text-center">
+                <i className="fa fa-github fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading" title="http://github.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
+                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+              </div>
+            </div>
           </AlertBox>
           <AlertBox type="info" canClose="false">
-            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
-              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
-              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
+            <div className="media">
+              <div className="media-left remote-repo-logo text-center">
+                <i className="fa fa-bitbucket fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading" title="http://bitbucket.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
+                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+              </div>
+            </div>
           </AlertBox>
           <AlertBox type="info" canClose="false">
-            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
-              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
-              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
-          </AlertBox>
-          <AlertBox type="info" canClose="false">
-            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
-              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
-              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
-          </AlertBox>
-          <AlertBox type="info" canClose="false">
-            <span className="lead"><i className="fa fa-bitbucket fa-lg"></i> Nebula</span>
-              <button type="button" className="btn pull-right btn-sm btn-danger">Remove</button>
-              <button type="button" className="btn pull-right btn-sm btn-success">Open</button>
+            <div className="media">
+              <div className="media-left remote-repo-logo text-center">
+                <i className="fa fa-gitlab fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading" title="http://gitlab.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
+                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+              </div>
+            </div>
           </AlertBox>
         </div>
       </div>
