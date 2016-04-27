@@ -55,14 +55,8 @@ class TabList extends React.Component {
   };
 
   detectTabPane(isTabLink = true, URLHash = window.location.hash) {
-    if(URLHash.indexOf('nodes') !== -1) {
-      return (isTabLink) ? document.getElementById('nodes-tab') : document.getElementById('nodes');
-    } else if(URLHash.indexOf('indices') !== -1) {
-      return (isTabLink) ? document.getElementById('indices-tab') : document.getElementById('indices');
-    } else if(URLHash.indexOf('queries') !== -1) {
-      return (isTabLink) ? document.getElementById('queries-tab') : document.getElementById('queries');
-    } else if(URLHash.indexOf('restapi') !== -1) {
-      return (isTabLink) ? document.getElementById('restapi-tab') : document.getElementById('restapi');
+    if(URLHash.indexOf('repositories') !== -1) {
+      return (isTabLink) ? document.getElementById('repositories-tab') : document.getElementById('repositories');
     } else {
       return (isTabLink) ? document.getElementById('setup-tab') : document.getElementById('setup');
     }
@@ -72,19 +66,10 @@ class TabList extends React.Component {
     return (
       <ul id="super-tab" className="nav nav-tabs super-tab-component">
         <li className="active">
-          <Link to="/setup" id="setup-tab" data-toggle="tab"><i className="fa fa-server fa-lg"></i> Project Setup</Link>
+          <Link to="/setup" id="setup-tab" data-toggle="tab">Project Setup</Link>
         </li>
         <li>
-          <Link to="/nodes" id="nodes-tab" data-toggle="tab"><i className="fa fa-cubes fa-lg"></i> Nodes</Link>
-        </li>
-        <li>
-          <Link to="/indices" id="indices-tab" data-toggle="tab"><i className="fa fa-th-list fa-lg"></i> Indices</Link>
-        </li>
-        <li>
-          <Link to="/queries" id="queries-tab" data-toggle="tab"><i className="fa fa-terminal fa-lg"></i> Queries</Link>
-        </li>
-        <li>
-          <Link to="/restapi" id="restapi-tab" data-toggle="tab"><i className="fa fa-code fa-lg"></i> REST API</Link>
+          <Link to="/repositories" id="repositories-tab" data-toggle="tab">Your repositories <span className="badge badge-primary">42</span></Link>
         </li>
       </ul>
     );

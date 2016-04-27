@@ -20,7 +20,7 @@ class Clone extends React.Component {
                   <div className="input-group">
                     <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
                     <span className="input-group-btn">
-                      <button className="btn btn-success" type="button" title="Clone from Github remote repository"><i className="fa fa-clone fa-lg"></i> Clone</button>
+                      <button className="btn btn-success" type="button" title="Clone from Github remote repository">Clone</button>
                     </span>
                   </div>
                 </p>

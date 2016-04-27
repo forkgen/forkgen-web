@@ -13,7 +13,7 @@ class OpenExist extends React.Component {
             <p className="input-group">
               <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
               <span className="input-group-btn">
-                <button className="btn btn-success" type="button" title="Open existing respository"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
+                <button className="btn btn-success" type="button" title="Open existing respository">Open</button>
               </span>
             </p>
           </form>
