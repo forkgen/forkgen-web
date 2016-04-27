@@ -72,9 +72,6 @@ class HorizontalMenu extends React.Component {
               <IndexLink to="/" className="navbar-brand" title="Forkgen v0.0.0 Alpha">Forkgen <sup><small>v0.0.0 Alpha</small></sup></IndexLink>
             </div>
             <div id="navbar" className="navbar-collapse collapse">
-              <ul className="nav navbar-nav">
-                <li title="Home"><IndexLink to="/"><i className="fa fa-lg fa-home"></i></IndexLink></li>
-              </ul>
               <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
                   <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="More Information, Help etc.">
