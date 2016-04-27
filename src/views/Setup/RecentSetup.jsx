@@ -18,8 +18,8 @@ class RecentSetup extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading" title="http://github.com/hegdeashwin/protocore">github.com/hegdeashwin/protocore</h4>
-                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
-                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" className="btn btn-success" title="Open">Open</button>
+                <button type="button" className="btn btn-danger" title="Delete">Delete</button>
               </div>
             </div>
           </AlertBox>
@@ -30,8 +30,8 @@ class RecentSetup extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading" title="http://bitbucket.com/hegdeashwin/protocore">bitbucket.com/hegdeashwin/protocore</h4>
-                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
-                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" className="btn btn-success" title="Open">Open</button>
+                <button type="button" className="btn btn-danger" title="Delete">Delete</button>
               </div>
             </div>
           </AlertBox>
@@ -42,8 +42,8 @@ class RecentSetup extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading" title="http://gitlab.com/hegdeashwin/protocore">gitlab.com/hegdeashwin/protocore</h4>
-                <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
-                <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
+                <button type="button" className="btn btn-success" title="Open">Open</button>
+                <button type="button" className="btn btn-danger" title="Delete">Delete</button>
               </div>
             </div>
           </AlertBox>

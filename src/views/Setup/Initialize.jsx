@@ -18,7 +18,7 @@ class Initialize extends React.Component {
             <div className="input-group">
               <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
               <span className="input-group-btn">
-                <button className="btn btn-success" type="button" title="Create new respository"><i className="fa fa-plus-square-o fa-lg"></i> Create</button>
+                <button className="btn btn-success" type="button" title="Create new respository">Create</button>
               </span>
             </div>
           </form>
