@@ -17,7 +17,7 @@ class RecentSetup extends React.Component {
                 <i className="fa fa-github fa-4x"></i>
               </div>
               <div className="media-body">
-                <h4 className="media-heading" title="http://github.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <h4 className="media-heading" title="http://github.com/hegdeashwin/protocore">github.com/hegdeashwin/protocore</h4>
                 <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
                 <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
               </div>
@@ -29,7 +29,7 @@ class RecentSetup extends React.Component {
                 <i className="fa fa-bitbucket fa-4x"></i>
               </div>
               <div className="media-body">
-                <h4 className="media-heading" title="http://bitbucket.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <h4 className="media-heading" title="http://bitbucket.com/hegdeashwin/protocore">bitbucket.com/hegdeashwin/protocore</h4>
                 <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
                 <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
               </div>
@@ -41,7 +41,7 @@ class RecentSetup extends React.Component {
                 <i className="fa fa-gitlab fa-4x"></i>
               </div>
               <div className="media-body">
-                <h4 className="media-heading" title="http://gitlab.com/hegdeashwin/protocore">hegdeashwin/protocore</h4>
+                <h4 className="media-heading" title="http://gitlab.com/hegdeashwin/protocore">gitlab.com/hegdeashwin/protocore</h4>
                 <button type="button" className="btn btn-success" title="Open"><i className="fa fa-folder-open-o fa-lg"></i> Open</button>
                 <button type="button" className="btn btn-danger" title="Delete"><i className="fa fa-trash-o fa-lg"></i> Delete</button>
               </div>
