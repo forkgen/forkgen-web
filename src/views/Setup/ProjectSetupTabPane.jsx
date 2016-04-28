@@ -14,19 +14,16 @@ class ProjectSetupTabPane extends React.Component {
 
         <div className="row">
           <div className="col-md-6">
-            <PanelBox title="Create New Respository" hasToolbar="true" type="panel-default">
+            <PanelBox title="Create a new respository" type="panel-primary">
               <Initialize/>
             </PanelBox>
-            <PanelBox title="Clone Existing Repository" hasToolbar="true" type="panel-default">
-              <Clone/>
-            </PanelBox>
-            <PanelBox title="Open Existing Respository" hasToolbar="true" type="panel-default">
+            <PanelBox title="Open an existing respository" type="panel-primary">
               <OpenExist/>
             </PanelBox>
           </div>
           <div className="col-md-6">
-            <PanelBox title="Open Recent Visited Repository" hasToolbar="true" type="panel-default">
-              <RecentSetup/>
+            <PanelBox title="Clone an existing repository" type="panel-primary">
+              <Clone/>
             </PanelBox>
           </div>
         </div>

@@ -12,7 +12,7 @@ class Clone extends React.Component {
             <form>
               <div className="media-body">
                 <p class="form-group">
-                  <label for="createRepository">Clone from Github / Gitlab / BitBucket remote repository:</label>
+                  <label for="createRepository">Specify Github / Gitlab / BitBucket remote repository URL:</label>
                   <input type="text" className="form-control" placeholder="E.g. https://github.com/hegdeashwin/forkgen.git" />
                 </p>
                 <p class="form-group">
