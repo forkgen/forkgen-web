@@ -17,13 +17,13 @@ class ProjectSetupTabPane extends React.Component {
             <PanelBox title="Create a new respository" type="panel-primary">
               <Initialize/>
             </PanelBox>
-            <PanelBox title="Open an existing respository" type="panel-primary">
-              <OpenExist/>
-            </PanelBox>
           </div>
           <div className="col-md-6">
             <PanelBox title="Clone an existing repository" type="panel-primary">
               <Clone/>
+            </PanelBox>
+            <PanelBox title="Open an existing respository" type="panel-primary">
+              <OpenExist/>
             </PanelBox>
           </div>
         </div>
