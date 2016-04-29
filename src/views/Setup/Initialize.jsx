@@ -21,16 +21,7 @@ class Initialize extends React.Component {
         'Prestashop', 'Processing', 'Python', 'Qooxdoo', 'Qt', 'R', 'ROS', 'Rails', 'RhodesRhomobile', 'Ruby', 'Rust', 'SCons',
         'Sass', 'Scala', 'Scrivener', 'Sdcc', 'SeamGen', 'SketchUp', 'SugarCRM', 'Swift', 'Symfony', 'SymphonyCMS', 'Target3001',
         'Tasm', 'TeX', 'Textpattern', 'TurboGears2', 'Typo3', 'Umbraco', 'Unity', 'UnrealEngine', 'VVVV', 'VisualStudio', 'Waf',
-        'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov', 'nanoc', 'opencart', 'stella', 'Erlang',
-        'ExpressionEngine', 'ExtJS', 'ExtJs', 'Fancy', 'Finale', 'ForceDotCom', 'Fortran', 'FuelPHP', 'GWT', 'GitBook',
-        'Go', 'Gradle', 'Grails', 'Haskell', 'IGORPro', 'Idris', 'Java', 'Jboss', 'Jekyll', 'Joomla', 'Jython', 'KiCAD',
-        'Kohana', 'LabVIEW', 'Laravel', 'Leiningen', 'LemonStand', 'Lilypond', 'Lithium', 'Lua', 'Magento', 'Maven',
-        'Mercury', 'MetaProgrammingSystem', 'Meteor', 'Nim', 'Node', 'OCaml', 'Objective', 'Opa', 'OracleForms', 'Packer',
-        'Perl', 'Phalcon', 'PlayFramework', 'Plone', 'Prestashop', 'Processing', 'Python', 'Qooxdoo', 'Qt', 'R', 'ROS', 'Rails',
-        'RhodesRhomobile', 'Ruby', 'Rust', 'SCons', 'Sass', 'Scala', 'Scrivener', 'Sdcc', 'SeamGen', 'SketchUp', 'SugarCRM', 'Swift',
-        'Symfony', 'SymphonyCMS', 'Target3001', 'Tasm', 'TeX', 'Textpattern', 'TurboGears2', 'Typo3', 'Umbraco', 'Unity',
-        'UnrealEngine', 'VVVV', 'VisualStudio', 'Waf', 'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov',
-        'nanoc', 'opencart', 'stella'];
+        'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov', 'nanoc', 'opencart', 'stella'];
 
     let license = ['Apache License 2.0', 'GNU General Public License v3.0',
     'MIT License', 'Artistic License 2.0', 'BSD 2-clause "Simplified" License',
@@ -55,7 +46,7 @@ class Initialize extends React.Component {
               </label>
             </div>
             <div className="form-group">
-              <DropdownList defaultValue={'Node'} data={ignoreList} />
+              <DropdownList defaultValue={'Node'} data={ignoreList} caseSensitive={false} filter='contains'/>
             </div>
             <div className="checkbox bg-info" title="Check in-case you want to add license file in the root of the repository">
               <label>
@@ -63,7 +54,7 @@ class Initialize extends React.Component {
               </label>
             </div>
             <div className="form-group">
-              <DropdownList defaultValue={'MIT License'} data={license} />
+              <DropdownList defaultValue={'MIT License'} data={license} caseSensitive={false} filter='contains'/>
             </div>
             <div className="checkbox bg-info" title="Check in-case you want to add README.md file in the root of the repository">
               <label>
