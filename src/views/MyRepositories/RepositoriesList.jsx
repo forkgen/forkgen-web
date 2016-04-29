@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-require('./RepositoriesList.less');
+import './RepositoriesList.less';
 
 class RepositoriesList extends React.Component {
   render() {

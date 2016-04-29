@@ -3,7 +3,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-require('./Breadcrumb.less');
+import './Breadcrumb.less';
 
 class Breadcrumb extends React.Component {
   render() {
