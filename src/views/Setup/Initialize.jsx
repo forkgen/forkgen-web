@@ -3,10 +3,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-require('./Initialize.less');
+import DropdownList from 'react-widgets/lib/DropdownList';
+
+import 'react-widgets/lib/less/react-widgets.less';
+import './Initialize.less';
 
 class Initialize extends React.Component {
   render() {
+    let ignoreList = ['Actionscript', 'Ada', 'Agda', 'Android', 'AppEngine', 'AppceleratorTitanium', 'ArchLinuxPackages',
+        'Autotools', 'Bancha', 'C', 'C', 'CFWheels', 'CMake', 'CUDA', 'CakePHP',
+        'ChefCookbook', 'Clojure', 'CodeIgniter', 'CommonLisp', 'Composer', 'Concrete5', 'Coq', 'CraftCMS', 'D',
+        'DM', 'Dart', 'Delphi', 'Drupal', 'EPiServer', 'Eagle', 'Elisp', 'Elixir', 'Elm', 'Erlang', 'ExpressionEngine',
+        'ExtJS', 'ExtJs', 'Fancy', 'Finale', 'ForceDotCom', 'Fortran', 'FuelPHP', 'GWT', 'GitBook', 'Go', 'Gradle', 'Grails',
+        'Haskell', 'IGORPro', 'Idris', 'Java', 'Jboss', 'Jekyll', 'Joomla', 'Jython', 'KiCAD', 'Kohana', 'LabVIEW', 'Laravel',
+        'Leiningen', 'LemonStand', 'Lilypond', 'Lithium', 'Lua', 'Magento', 'Maven', 'Mercury', 'MetaProgrammingSystem', 'Meteor',
+        'Nim', 'Node', 'OCaml', 'Objective', 'Opa', 'OracleForms', 'Packer', 'Perl', 'Phalcon', 'PlayFramework', 'Plone',
+        'Prestashop', 'Processing', 'Python', 'Qooxdoo', 'Qt', 'R', 'ROS', 'Rails', 'RhodesRhomobile', 'Ruby', 'Rust', 'SCons',
+        'Sass', 'Scala', 'Scrivener', 'Sdcc', 'SeamGen', 'SketchUp', 'SugarCRM', 'Swift', 'Symfony', 'SymphonyCMS', 'Target3001',
+        'Tasm', 'TeX', 'Textpattern', 'TurboGears2', 'Typo3', 'Umbraco', 'Unity', 'UnrealEngine', 'VVVV', 'VisualStudio', 'Waf',
+        'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov', 'nanoc', 'opencart', 'stella', 'Erlang',
+        'ExpressionEngine', 'ExtJS', 'ExtJs', 'Fancy', 'Finale', 'ForceDotCom', 'Fortran', 'FuelPHP', 'GWT', 'GitBook',
+        'Go', 'Gradle', 'Grails', 'Haskell', 'IGORPro', 'Idris', 'Java', 'Jboss', 'Jekyll', 'Joomla', 'Jython', 'KiCAD',
+        'Kohana', 'LabVIEW', 'Laravel', 'Leiningen', 'LemonStand', 'Lilypond', 'Lithium', 'Lua', 'Magento', 'Maven',
+        'Mercury', 'MetaProgrammingSystem', 'Meteor', 'Nim', 'Node', 'OCaml', 'Objective', 'Opa', 'OracleForms', 'Packer',
+        'Perl', 'Phalcon', 'PlayFramework', 'Plone', 'Prestashop', 'Processing', 'Python', 'Qooxdoo', 'Qt', 'R', 'ROS', 'Rails',
+        'RhodesRhomobile', 'Ruby', 'Rust', 'SCons', 'Sass', 'Scala', 'Scrivener', 'Sdcc', 'SeamGen', 'SketchUp', 'SugarCRM', 'Swift',
+        'Symfony', 'SymphonyCMS', 'Target3001', 'Tasm', 'TeX', 'Textpattern', 'TurboGears2', 'Typo3', 'Umbraco', 'Unity',
+        'UnrealEngine', 'VVVV', 'VisualStudio', 'Waf', 'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov',
+        'nanoc', 'opencart', 'stella'];
+
     return (
       <div className="media project-container">
         <div className="media-body">
@@ -22,223 +47,7 @@ class Initialize extends React.Component {
               </label>
             </div>
             <div className="form-group">
-              <select>
-                <option>Actionscript</option>
-                <option>Ada</option>
-                <option>Agda</option>
-                <option>Android</option>
-                <option>AppEngine</option>
-                <option>AppceleratorTitanium</option>
-                <option>ArchLinuxPackages</option>
-                <option>Autotools</option>
-                <option>Bancha</option>
-                <option>C</option>
-                <option>C</option>
-                <option>CFWheels</option>
-                <option>CMake</option>
-                <option>CUDA</option>
-                <option>CakePHP</option>
-                <option>ChefCookbook</option>
-                <option>Clojure</option>
-                <option>CodeIgniter</option>
-                <option>CommonLisp</option>
-                <option>Composer</option>
-                <option>Concrete5</option>
-                <option>Coq</option>
-                <option>CraftCMS</option>
-                <option>D</option>
-                <option>DM</option>
-                <option>Dart</option>
-                <option>Delphi</option>
-                <option>Drupal</option>
-                <option>EPiServer</option>
-                <option>Eagle</option>
-                <option>Elisp</option>
-                <option>Elixir</option>
-                <option>Elm</option>
-                <option>Erlang</option>
-                <option>ExpressionEngine</option>
-                <option>ExtJS</option>
-                <option>ExtJs</option>
-                <option>Fancy</option>
-                <option>Finale</option>
-                <option>ForceDotCom</option>
-                <option>Fortran</option>
-                <option>FuelPHP</option>
-                <option>GWT</option>
-                <option>GitBook</option>
-                <option>Go</option>
-                <option>Gradle</option>
-                <option>Grails</option>
-                <option>Haskell</option>
-                <option>IGORPro</option>
-                <option>Idris</option>
-                <option>Java</option>
-                <option>Jboss</option>
-                <option>Jekyll</option>
-                <option>Joomla</option>
-                <option>Jython</option>
-                <option>KiCAD</option>
-                <option>Kohana</option>
-                <option>LabVIEW</option>
-                <option>Laravel</option>
-                <option>Leiningen</option>
-                <option>LemonStand</option>
-                <option>Lilypond</option>
-                <option>Lithium</option>
-                <option>Lua</option>
-                <option>Magento</option>
-                <option>Maven</option>
-                <option>Mercury</option>
-                <option>MetaProgrammingSystem</option>
-                <option>Meteor</option>
-                <option>Nim</option>
-                <option>Node</option>
-                <option>OCaml</option>
-                <option>Objective</option>
-                <option>Opa</option>
-                <option>OracleForms</option>
-                <option>Packer</option>
-                <option>Perl</option>
-                <option>Phalcon</option>
-                <option>PlayFramework</option>
-                <option>Plone</option>
-                <option>Prestashop</option>
-                <option>Processing</option>
-                <option>Python</option>
-                <option>Qooxdoo</option>
-                <option>Qt</option>
-                <option>R</option>
-                <option>ROS</option>
-                <option>Rails</option>
-                <option>RhodesRhomobile</option>
-                <option>Ruby</option>
-                <option>Rust</option>
-                <option>SCons</option>
-                <option>Sass</option>
-                <option>Scala</option>
-                <option>Scrivener</option>
-                <option>Sdcc</option>
-                <option>SeamGen</option>
-                <option>SketchUp</option>
-                <option>SugarCRM</option>
-                <option>Swift</option>
-                <option>Symfony</option>
-                <option>SymphonyCMS</option>
-                <option>Target3001</option>
-                <option>Tasm</option>
-                <option>TeX</option>
-                <option>Textpattern</option>
-                <option>TurboGears2</option>
-                <option>Typo3</option>
-                <option>Umbraco</option>
-                <option>Unity</option>
-                <option>UnrealEngine</option>
-                <option>VVVV</option>
-                <option>VisualStudio</option>
-                <option>Waf</option>
-                <option>WordPress</option>
-                <option>Xojo</option>
-                <option>Yeoman</option>
-                <option>Yii</option>
-                <option>ZendFramework</option>
-                <option>Zephir</option>
-                <option>gcov</option>
-                <option>nanoc</option>
-                <option>opencart</option>
-                <option>stella</option>
-                <option>Erlang</option>
-                <option>ExpressionEngine</option>
-                <option>ExtJS</option>
-                <option>ExtJs</option>
-                <option>Fancy</option>
-                <option>Finale</option>
-                <option>ForceDotCom</option>
-                <option>Fortran</option>
-                <option>FuelPHP</option>
-                <option>GWT</option>
-                <option>GitBook</option>
-                <option>Go</option>
-                <option>Gradle</option>
-                <option>Grails</option>
-                <option>Haskell</option>
-                <option>IGORPro</option>
-                <option>Idris</option>
-                <option>Java</option>
-                <option>Jboss</option>
-                <option>Jekyll</option>
-                <option>Joomla</option>
-                <option>Jython</option>
-                <option>KiCAD</option>
-                <option>Kohana</option>
-                <option>LabVIEW</option>
-                <option>Laravel</option>
-                <option>Leiningen</option>
-                <option>LemonStand</option>
-                <option>Lilypond</option>
-                <option>Lithium</option>
-                <option>Lua</option>
-                <option>Magento</option>
-                <option>Maven</option>
-                <option>Mercury</option>
-                <option>MetaProgrammingSystem</option>
-                <option>Meteor</option>
-                <option>Nim</option>
-                <option>Node</option>
-                <option>OCaml</option>
-                <option>Objective</option>
-                <option>Opa</option>
-                <option>OracleForms</option>
-                <option>Packer</option>
-                <option>Perl</option>
-                <option>Phalcon</option>
-                <option>PlayFramework</option>
-                <option>Plone</option>
-                <option>Prestashop</option>
-                <option>Processing</option>
-                <option>Python</option>
-                <option>Qooxdoo</option>
-                <option>Qt</option>
-                <option>R</option>
-                <option>ROS</option>
-                <option>Rails</option>
-                <option>RhodesRhomobile</option>
-                <option>Ruby</option>
-                <option>Rust</option>
-                <option>SCons</option>
-                <option>Sass</option>
-                <option>Scala</option>
-                <option>Scrivener</option>
-                <option>Sdcc</option>
-                <option>SeamGen</option>
-                <option>SketchUp</option>
-                <option>SugarCRM</option>
-                <option>Swift</option>
-                <option>Symfony</option>
-                <option>SymphonyCMS</option>
-                <option>Target3001</option>
-                <option>Tasm</option>
-                <option>TeX</option>
-                <option>Textpattern</option>
-                <option>TurboGears2</option>
-                <option>Typo3</option>
-                <option>Umbraco</option>
-                <option>Unity</option>
-                <option>UnrealEngine</option>
-                <option>VVVV</option>
-                <option>VisualStudio</option>
-                <option>Waf</option>
-                <option>WordPress</option>
-                <option>Xojo</option>
-                <option>Yeoman</option>
-                <option>Yii</option>
-                <option>ZendFramework</option>
-                <option>Zephir</option>
-                <option>gcov</option>
-                <option>nanoc</option>
-                <option>opencart</option>
-                <option>stella</option>
-              </select>
+              <DropdownList defaultValue={'Node'} data={ignoreList} />
             </div>
             <div className="checkbox bg-info" title="Check in-case you want to add license file in the root of the repository">
               <label>
