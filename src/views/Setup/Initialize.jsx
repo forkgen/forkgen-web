@@ -46,7 +46,7 @@ class Initialize extends React.Component {
           <form>
             <div className="checkbox bg-info" title="Check in-case you want to create a bare repository (Git repository without a working directory)">
               <label>
-                <input type="checkbox" /> Create bare repository.
+                <input type="checkbox" /> Create a bare repository.
               </label>
             </div>
             <div className="checkbox bg-info" title="Check in-case you want to add .gitignore in the root of the repository">

@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-require('./PanelBox.less');
+import './PanelBox.less';
 
 class PanelBox extends React.Component {
   constructor() {
