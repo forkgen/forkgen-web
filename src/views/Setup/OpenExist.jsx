@@ -9,13 +9,15 @@ class OpenExist extends React.Component {
       <div className="media project-container">
         <div className="media-body">
           <form>
-            <label for="createRepository">Specify repository location:</label>
-            <p className="input-group">
-              <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
-              <span className="input-group-btn">
-                <button className="btn btn-success" type="button" title="Open existing respository">Open</button>
-              </span>
-            </p>
+            <div className="form-group">
+              <label for="createRepository">Specify repository location:</label>
+              <div className="input-group">
+                <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
+                <span className="input-group-btn">
+                  <button className="btn btn-success" type="button" title="Open existing respository">Open</button>
+                </span>
+              </div>
+            </div>
           </form>
         </div>
       </div>
