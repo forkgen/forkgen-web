@@ -32,6 +32,14 @@ class Initialize extends React.Component {
         'UnrealEngine', 'VVVV', 'VisualStudio', 'Waf', 'WordPress', 'Xojo', 'Yeoman', 'Yii', 'ZendFramework', 'Zephir', 'gcov',
         'nanoc', 'opencart', 'stella'];
 
+    let license = ['Apache License 2.0', 'GNU General Public License v3.0',
+    'MIT License', 'Artistic License 2.0', 'BSD 2-clause "Simplified" License',
+    'BSD 3-clause "New" or "Revised" License', 'Creative Commons Zero v1.0 Universal',
+    'Eclipse Public License 1.0', 'GNU Affero General Public License v3.0',
+    'GNU General Public License v2.0', 'GNU Lesser General Public License v2.1',
+    'GNU Lesser General Public License v3.0', 'ISC License',
+    'Mozilla Public License 2.0', 'The Unlicense'];
+
     return (
       <div className="media project-container">
         <div className="media-body">
@@ -55,23 +63,7 @@ class Initialize extends React.Component {
               </label>
             </div>
             <div className="form-group">
-              <select>
-                <option>Apache License 2.0</option>
-                <option>GNU General Public License v3.0</option>
-                <option>MIT License</option>
-                <option>Artistic License 2.0</option>
-                <option>BSD 2-clause "Simplified" License</option>
-                <option>BSD 3-clause "New" or "Revised" License</option>
-                <option>Creative Commons Zero v1.0 Universal</option>
-                <option>Eclipse Public License 1.0</option>
-                <option>GNU Affero General Public License v3.0</option>
-                <option>GNU General Public License v2.0</option>
-                <option>GNU Lesser General Public License v2.1</option>
-                <option>GNU Lesser General Public License v3.0</option>
-                <option>ISC License</option>
-                <option>Mozilla Public License 2.0</option>
-                <option>The Unlicense</option>
-              </select>
+              <DropdownList defaultValue={'MIT License'} data={license} />
             </div>
             <div className="checkbox bg-info" title="Check in-case you want to add README.md file in the root of the repository">
               <label>
