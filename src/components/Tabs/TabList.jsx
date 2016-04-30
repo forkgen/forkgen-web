@@ -57,6 +57,8 @@ class TabList extends React.Component {
   detectTabPane(isTabLink = true, URLHash = window.location.hash) {
     if(URLHash.indexOf('repositories') !== -1) {
       return (isTabLink) ? document.getElementById('repositories-tab') : document.getElementById('repositories');
+    } else if(URLHash.indexOf('dashboard') !== -1) {
+      return (isTabLink) ? document.getElementById('dashboard-tab') : document.getElementById('dashboard');
     } else {
       return (isTabLink) ? document.getElementById('setup-tab') : document.getElementById('setup');
     }
@@ -70,6 +72,9 @@ class TabList extends React.Component {
         </li>
         <li>
           <Link to="/repositories" id="repositories-tab" data-toggle="tab">Your repositories <span className="badge badge-primary">42</span></Link>
+        </li>
+        <li>
+          <Link to="/dashboard" id="dashboard-tab" data-toggle="tab">Dashboard <span className="badge badge-primary">3</span></Link>
         </li>
       </ul>
     );
