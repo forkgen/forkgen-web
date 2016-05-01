@@ -47,7 +47,7 @@ class MasterLayout extends React.Component {
           <div className="row">
             <div className="col-md-12 tab-area">
               <ul id="super-tab" className="nav nav-tabs super-tab-component">
-                {this.state.data.map((link, i) => <TabList tab = {tab}/>)}
+                {this.state.data.map((link, i) => <TabList key = {i} tab = {link}/>)}
               </ul>
               <TabPaneContainer/>
             </div>
