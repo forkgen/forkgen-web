@@ -66,17 +66,9 @@ class TabList extends React.Component {
 
   render() {
     return (
-      <ul id="super-tab" className="nav nav-tabs super-tab-component">
-        <li className="active">
-          <Link to="/setup" id="setup-tab" data-toggle="tab">Project Setup</Link>
-        </li>
-        <li>
-          <Link to="/repositories" id="repositories-tab" data-toggle="tab">Your repositories <span className="badge badge-primary">42</span></Link>
-        </li>
-        <li>
-          <Link to="/dashboard" id="dashboard-tab" data-toggle="tab">Dashboard <span className="badge badge-primary">3</span></Link>
-        </li>
-      </ul>
+      <li className="active">
+        <Link to={this.props.tab.to} id={this.props.tab.id} data-toggle="tab">{this.props.tab.name}</Link>
+      </li>
     );
   }
 };
