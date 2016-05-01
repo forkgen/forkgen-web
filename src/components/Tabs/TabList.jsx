@@ -14,55 +14,49 @@ class TabList extends React.Component {
     super(props);
 
     this.styleClass = new StyleClassUtils();
-
-    this.detectTabPane = this.detectTabPane.bind(this);
     this.handleTabPaneLoad = this.handleTabPaneLoad.bind(this);
+    this.switchTabs = this.switchTabs.bind(this);
   };
 
-  handleTabPaneLoad() {
-    let SelectedTabPaneLink = this.detectTabPane();
-    let SelectedTabPaneContent = this.detectTabPane(false);
-
+  switchTabs(e, defaultTabAsPerURL) {
+    let target = (defaultTabAsPerURL) ? e : e.target;
+    let targetedTabLink = target.attributes.getNamedItem('id').value;
     let tablink = document.getElementById('super-tab');
     let tabContent = document.getElementById('super-tab-content');
     let i = 0;
-
-    var self = this;
+    let self = this;
 
     for(; i < tablink.children.length ; i++ ){
       self.styleClass.removeClass(tablink.children[i], 'active');
     }
 
-    this.styleClass.addClass(ReactDOM.findDOMNode(SelectedTabPaneLink).parentNode, 'active');
+    this.styleClass.addClass(ReactDOM.findDOMNode(target).parentNode, 'active');
+
+    let targetedTabContent = targetedTabLink.split('-');
+    targetedTabContent = document.getElementById(targetedTabContent[0]);
 
     for(i = 0; i < tabContent.children.length ; i++ ){
       self.styleClass.removeClass(tabContent.children[i], 'in');
       self.styleClass.removeClass(tabContent.children[i], 'active');
     }
 
-    this.styleClass.addClass(ReactDOM.findDOMNode(SelectedTabPaneContent), 'in');
-    this.styleClass.addClass(ReactDOM.findDOMNode(SelectedTabPaneContent), 'active');
+    this.styleClass.addClass(ReactDOM.findDOMNode(targetedTabContent), 'in');
+    this.styleClass.addClass(ReactDOM.findDOMNode(targetedTabContent), 'active');
 
+  };
+
+  handleTabPaneLoad() {
+    let URLHash = window.location.hash.substr(2);
+    URLHash += '-tab';
+    this.switchTabs(document.getElementById(URLHash), true);
   };
 
   componentDidMount() {
     document.addEventListener('DOMContentLoaded', this.handleTabPaneLoad);
-    window.addEventListener('hashchange', this.handleTabPaneLoad);
   };
 
   componentWillUnmount() {
     document.removeEventListener('DOMContentLoaded', this.handleTabPaneLoad);
-    window.removeEventListener('hashchange', this.handleTabPaneLoad);
-  };
-
-  detectTabPane(isTabLink = true, URLHash = window.location.hash) {
-    if(URLHash.indexOf('repositories') !== -1) {
-      return (isTabLink) ? document.getElementById('repositories-tab') : document.getElementById('repositories');
-    } else if(URLHash.indexOf('dashboard') !== -1) {
-      return (isTabLink) ? document.getElementById('dashboard-tab') : document.getElementById('dashboard');
-    } else {
-      return (isTabLink) ? document.getElementById('setup-tab') : document.getElementById('setup');
-    }
   };
 
   render() {
@@ -79,7 +73,7 @@ class TabList extends React.Component {
 
     return (
       <li className={defaultActiveTab}>
-        <Link to={this.props.tab.to} id={this.props.tab.id} data-toggle="tab">
+        <Link to={this.props.tab.to} id={this.props.tab.id} data-toggle="tab" onClick={this.switchTabs}>
           {this.props.tab.name} <span className={countOnTab}>{this.props.tab.count}</span>
         </Link>
       </li>
