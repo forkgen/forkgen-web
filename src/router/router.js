@@ -9,7 +9,7 @@ import App from '../App.js';
 
 import ProjectSetupTabPane from '../views/Setup/ProjectSetupTabPane.jsx';
 import MyRepositoriesTabPane from '../views/MyRepositories/MyRepositoriesTabPane.jsx';
-import DashboardTabPane from '../views/Dashboard/DashboardTabPane.jsx';
+import SettingsTabPane from '../views/Settings/SettingsTabPane.jsx';
 import ErrorPage from '../views/ErrorPage/PageNotFound.jsx';
 
 const Routes = (
@@ -18,7 +18,7 @@ const Routes = (
       <IndexRoute component = {ProjectSetupTabPane} />
       <Route path = "setup" component = {ProjectSetupTabPane} />
       <Route path = "repositories" component = {MyRepositoriesTabPane} />
-      <Route path = "dashboard(/:repository)" component = {DashboardTabPane} />
+      <Route path = "settings" component = {SettingsTabPane} />
     </Route>
     <Route path="*" component={ErrorPage}/>
   </Router>

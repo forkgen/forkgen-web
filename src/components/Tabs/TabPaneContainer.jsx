@@ -4,7 +4,7 @@ import React from 'react';
 
 import ProjectSetupTabPane from '../../views/Setup/ProjectSetupTabPane.jsx';
 import MyRepositoriesTabPane from '../../views/MyRepositories/MyRepositoriesTabPane.jsx';
-import DashboardTabPane from '../../views/Dashboard/DashboardTabPane.jsx';
+import SettingsTabPane from '../../views/Settings/SettingsTabPane.jsx';
 
 class TabPaneContainer extends React.Component {
   render() {
@@ -16,8 +16,8 @@ class TabPaneContainer extends React.Component {
         <div className="tab-pane" id="repositories">
           <MyRepositoriesTabPane />
         </div>
-        <div className="tab-pane" id="dashboard">
-          <DashboardTabPane />
+        <div className="tab-pane" id="settings">
+          <SettingsTabPane />
         </div>
       </div>
     );

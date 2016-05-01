@@ -25,10 +25,9 @@ class MasterLayout extends React.Component {
         "name": "Your Repositories",
         "count": 42
       }, {
-        "to": "/dashboard",
-        "id": "dashboard-tab",
-        "name": "Dashboard",
-        "count": 3
+        "to": "/settings",
+        "id": "settings-tab",
+        "name": "Settings"
       }]
     };
 
