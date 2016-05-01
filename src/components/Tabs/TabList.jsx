@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import classNames from 'classnames';
 import { Link } from 'react-router';
 
 require('./Tabs.less');
@@ -65,9 +66,22 @@ class TabList extends React.Component {
   };
 
   render() {
+    let defaultActiveTab = {
+      'active': this.props.tab.defaultActive
+    };
+    defaultActiveTab = classNames(defaultActiveTab);
+
+    let countOnTab = {
+      'badge': this.props.tab.count,
+      'badge-primary': this.props.tab.count
+    };
+    countOnTab = classNames(countOnTab);
+
     return (
-      <li className="active">
-        <Link to={this.props.tab.to} id={this.props.tab.id} data-toggle="tab">{this.props.tab.name}</Link>
+      <li className={defaultActiveTab}>
+        <Link to={this.props.tab.to} id={this.props.tab.id} data-toggle="tab">
+          {this.props.tab.name} <span className={countOnTab}>{this.props.tab.count}</span>
+        </Link>
       </li>
     );
   }
