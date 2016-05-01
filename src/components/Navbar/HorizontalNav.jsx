@@ -59,6 +59,8 @@ class HorizontalMenu extends React.Component {
     for(; i < navbarDropdown.length ; i++ ){
       navbarDropdown[i].removeEventListener('click', self.openNavbarDropdown);
     }
+
+    document.removeEventListener('click', self.closeNavbarDropdown);
   };
 
   render() {
