@@ -53,10 +53,12 @@ class TabList extends React.Component {
 
   componentDidMount() {
     document.addEventListener('DOMContentLoaded', this.handleTabPaneLoad);
+    window.addEventListener('hashchange', this.handleTabPaneLoad);
   };
 
   componentWillUnmount() {
     document.removeEventListener('DOMContentLoaded', this.handleTabPaneLoad);
+    window.removeEventListener('hashchange', this.handleTabPaneLoad);
   };
 
   render() {
