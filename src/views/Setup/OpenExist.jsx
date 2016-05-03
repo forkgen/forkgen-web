@@ -9,6 +9,11 @@ class OpenExist extends React.Component {
       <div className="media project-container">
         <div className="media-body">
           <form>
+            <div className="checkbox bg-info" title="Check in-case you want to open the repository in browser new tab">
+              <label>
+                <input type="checkbox" /> Open in new browser tab.
+              </label>
+            </div>
             <div className="form-group">
               <label for="createRepository">Specify repository location:</label>
               <div className="input-group">
