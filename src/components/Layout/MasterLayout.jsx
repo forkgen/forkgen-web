@@ -27,7 +27,7 @@ class MasterLayout extends React.Component {
       }, {
         "to": "/settings",
         "id": "settings-tab",
-        "name": "Settings"
+        "name": "Account Settings"
       }]
     };
 
