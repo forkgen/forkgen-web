@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router';
+import SettingsSidebar from './SettingsSidebar.jsx';
 
 class Settings extends React.Component {
   render() {
@@ -9,13 +10,7 @@ class Settings extends React.Component {
       <div className="settings-container">
         <div className="row">
           <div className="col-md-3">
-            <div className="list-group">
-              <Link className="list-group-item active" to="settings">Profile</Link>
-              <Link className="list-group-item" to="settings/collaboration">Collaboration</Link>
-              <Link className="list-group-item" to="settings/notifications">Notifications</Link>
-              <Link className="list-group-item" to="settings/sshkey">SSH Key</Link>
-              <Link className="list-group-item" to="settings/security">Security</Link>
-            </div>
+            <SettingsSidebar />
           </div>
           <div className="col-md-9">
             <div className="panel panel-default">
