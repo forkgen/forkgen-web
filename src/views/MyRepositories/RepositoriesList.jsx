@@ -16,7 +16,7 @@ class RepositoriesList extends React.Component {
           <div className="media-body">
             <div className="col-md-6">
               <h4 className="media-heading">
-                <Link to={`/dashboard/protocore`} href="#">Protocore</Link>
+                <Link to={`/repository/Protocore/dashboard`} href="#">Protocore</Link>
                 <a target="_blank" href="//github.com/hegdeashwin/Protocore" title="Visit: github.com/hegdeashwin/Protocore"></a>
               </h4>
               <p>Github Repository: <a target="_blank" href="//github.com/hegdeashwin/Protocore">github.com/hegdeashwin/Protocore</a></p>
