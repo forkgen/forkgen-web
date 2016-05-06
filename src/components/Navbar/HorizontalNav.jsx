@@ -77,7 +77,7 @@ class HorizontalMenu extends React.Component {
               <ul className="nav navbar-nav navbar-right">
                 <li className="dropdown">
                   <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="More Information, Help etc.">
-                    <i className="fa fa-lg fa-life-saver"></i> Help<span className="caret"></span>
+                    <i className="fa fa-lg fa-life-saver"></i> <span className="caret"></span>
                   </a>
                   <ul className="dropdown-menu">
                     <li title="Documentation">
@@ -86,7 +86,7 @@ class HorizontalMenu extends React.Component {
                   </ul>
                 </li>
                 <li className="dropdown">
-                  <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="Developers Connection"><i className="fa fa-connectdevelop fa-lg"></i> Developers<span className="caret"></span></a>
+                  <a className="dropdown-toggle navbar-dropdown" data-toggle="dropdown" title="Developers Connection"><i className="fa fa-connectdevelop fa-lg"></i> <span className="caret"></span></a>
                   <ul className="dropdown-menu">
                     <li title="Github Home Page">
                       <a href="//github.com/hegdeashwin/forkgen" target="_blank">Github Home Page</a>
