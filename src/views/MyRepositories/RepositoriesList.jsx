@@ -9,66 +9,63 @@ class RepositoriesList extends React.Component {
   render() {
     return (
       <div className="my-repositories-list">
-        <div className="media list">
-          <div className="media-left remote-repo-logo text-center">
-            <i className="fa fa-github fa-3x"></i>
-          </div>
-          <div className="media-body">
-            <div className="col-md-6">
-              <h4 className="media-heading">
-                <Link to={`/repository/Protocore/dashboard`} href="#">Protocore</Link>
-                <a target="_blank" href="//github.com/hegdeashwin/Protocore" title="Visit: github.com/hegdeashwin/Protocore"></a>
-              </h4>
-              <p>Github Repository: <a target="_blank" href="//github.com/hegdeashwin/Protocore">github.com/hegdeashwin/Protocore</a></p>
+        <div className="col-md-6 profile">
+          <div className="profile-blog blog-border">
+            <div className="media">
+              <div className="media-left">
+                <i className="fa fa-github fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading lead">Protocore</h4>
+                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+              </div>
             </div>
-            <div className="col-md-6">
-              <p className="pull-right">
-                <a href="#" className="btn btn-sm btn-success">Open</a>
-                <a href="#" className="btn btn-sm btn-danger">Delete</a>
-              </p>
-            </div>
+            <hr />
+            <ul className="list-inline share-list">
+              <li><Link to="repository/:repository/dashboard" className="btn btn-success btn-sm">Open</Link></li>
+              <li><Link to="repository/:repository/dashboard" className="btn btn-danger btn-sm">Delete</Link></li>
+            </ul>
           </div>
         </div>
-        <div className="media list">
-          <div className="media-left remote-repo-logo text-center">
-            <i className="fa fa-bitbucket fa-3x"></i>
-          </div>
-          <div className="media-body">
-            <div className="col-md-6">
-              <h4 className="media-heading">
-                <a href="#">Protocore</a>
-                <a target="_blank" href="//github.com/hegdeashwin/Protocore" title="Visit: github.com/hegdeashwin/Protocore"></a>
-              </h4>
-              <p>Github Repository: <a target="_blank" href="//github.com/hegdeashwin/Protocore">github.com/hegdeashwin/Protocore</a></p>
+
+        <div className="col-md-6 profile">
+          <div className="profile-blog blog-border">
+            <div className="media">
+              <div className="media-left">
+                <i className="fa fa-bitbucket fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading lead">Protocore</h4>
+                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+              </div>
             </div>
-            <div className="col-md-6">
-              <p className="pull-right">
-                <a href="#" className="btn btn-sm btn-success">Open</a>
-                <a href="#" className="btn btn-sm btn-danger">Delete</a>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="media list">
-          <div className="media-left remote-repo-logo text-center">
-            <i className="fa fa-gitlab fa-3x"></i>
-          </div>
-          <div className="media-body">
-            <div className="col-md-6">
-              <h4 className="media-heading">
-                <a href="#">Protocore</a>
-                <a target="_blank" href="//github.com/hegdeashwin/Protocore" title="Visit: github.com/hegdeashwin/Protocore"></a>
-              </h4>
-              <p>Github Repository: <a target="_blank" href="//github.com/hegdeashwin/Protocore">github.com/hegdeashwin/Protocore</a></p>
-            </div>
-            <div className="col-md-6">
-              <p className="pull-right">
-                <a href="#" className="btn btn-sm btn-success">Open</a>
-                <a href="#" className="btn btn-sm btn-danger">Delete</a>
-              </p>
-            </div>
+            <hr />
+            <ul className="list-inline share-list">
+              <li><Link to="repository/:repository/dashboard" className="btn btn-success btn-sm">Open</Link></li>
+              <li><Link to="repository/:repository/dashboard" className="btn btn-danger btn-sm">Delete</Link></li>
+            </ul>
           </div>
         </div>
+
+        <div className="col-md-6 profile">
+          <div className="profile-blog blog-border">
+            <div className="media">
+              <div className="media-left">
+                <i className="fa fa-gitlab fa-4x"></i>
+              </div>
+              <div className="media-body">
+                <h4 className="media-heading lead">Protocore</h4>
+                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+              </div>
+            </div>
+            <hr />
+            <ul className="list-inline share-list">
+              <li><Link to="repository/:repository/dashboard" className="btn btn-success btn-sm">Open</Link></li>
+              <li><Link to="repository/:repository/dashboard" className="btn btn-danger btn-sm">Delete</Link></li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     );
   }

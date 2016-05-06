@@ -11,9 +11,7 @@ class MyRepositoriesTabPane extends React.Component {
       <div className="my-repositories-container">
         <div className="row">
           <div className="col-md-12">
-            <PanelBox title="Your Respository" hasToolbar="false" type="panel-default">
-              <RepositoriesList/>
-            </PanelBox>
+            <RepositoriesList/>
           </div>
         </div>
       </div>
