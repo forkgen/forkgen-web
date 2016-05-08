@@ -9,7 +9,7 @@ class RepositoriesList extends React.Component {
   render() {
     return (
       <div className="my-repositories-list">
-        <div className="col-md-4 profile">
+        <div className="col-md-6 profile">
           <div className="profile-blog blog-border">
             <div className="media">
               <div className="media-left">
@@ -17,7 +17,10 @@ class RepositoriesList extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading lead">Protocore</h4>
-                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+                <span className="label label-primary">Bare Repository</span>
+                <p>
+                  <span className="label label-primary">Location: C:\Projects\Protocore</span>
+                </p>
               </div>
             </div>
             <hr />
@@ -35,7 +38,7 @@ class RepositoriesList extends React.Component {
           </div>
         </div>
 
-        <div className="col-md-4 profile">
+        <div className="col-md-6 profile">
           <div className="profile-blog blog-border">
             <div className="media">
               <div className="media-left">
@@ -43,7 +46,10 @@ class RepositoriesList extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading lead">Protocore</h4>
-                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+                <span className="label label-primary">Bare Repository</span>
+                <p>
+                  <span className="label label-primary">Location: C:\Projects\Protocore</span>
+                </p>
               </div>
             </div>
             <hr />
@@ -61,7 +67,7 @@ class RepositoriesList extends React.Component {
           </div>
         </div>
 
-        <div className="col-md-4 profile">
+        <div className="col-md-6 profile">
           <div className="profile-blog blog-border">
             <div className="media">
               <div className="media-left">
@@ -69,7 +75,10 @@ class RepositoriesList extends React.Component {
               </div>
               <div className="media-body">
                 <h4 className="media-heading lead">Protocore</h4>
-                <p>Protocore is an open source walking application skeleton for a typical unstructured JavaScript/jQuery web apps.</p>
+                <span className="label label-primary">Bare Repository</span>
+                <p>
+                  <span className="label label-primary">Location: C:\Projects\Protocore</span>
+                </p>
               </div>
             </div>
             <hr />
