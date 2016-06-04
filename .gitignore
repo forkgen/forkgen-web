@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+*.map
 
 # Runtime data
 pids
