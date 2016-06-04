@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import DropdownList from 'react-widgets/lib/DropdownList';
-
 import 'react-widgets/lib/less/react-widgets.less';
 import './Initialize.less';
+
+import DropdownList from 'react-widgets/lib/DropdownList';
+import { Panel } from 'react-bootstrap';
+
 
 class Initialize extends React.Component {
   render() {
@@ -32,47 +33,49 @@ class Initialize extends React.Component {
     'Mozilla Public License 2.0', 'The Unlicense'];
 
     return (
-      <div className="media project-container">
-        <div className="media-body">
-          <form>
-            <div className="checkbox bg-info" title="Check in-case you want to create a bare repository (Git repository without a working directory)">
-              <label>
-                <input type="checkbox" /> Create a bare repository.
-              </label>
-            </div>
-            <div className="checkbox bg-info" title="Check in-case you want to add .gitignore in the root of the repository">
-              <label>
-                <input type="checkbox" /> Add .ignore file on repository root.
-              </label>
-            </div>
-            <div className="form-group">
-              <DropdownList defaultValue={'Node'} data={ignoreList} caseSensitive={false} filter='contains'/>
-            </div>
-            <div className="checkbox bg-info" title="Check in-case you want to add license file in the root of the repository">
-              <label>
-                <input type="checkbox" /> Add a license file on repository root.
-              </label>
-            </div>
-            <div className="form-group">
-              <DropdownList defaultValue={'MIT License'} data={license} caseSensitive={false} filter='contains'/>
-            </div>
-            <div className="checkbox bg-info" title="Check in-case you want to add README.md file in the root of the repository">
-              <label>
-                <input type="checkbox" /> Initialize this repository with a README.md
-              </label>
-            </div>
-            <div className="form-group">
-              <label for="createRepository">Specify repository location:</label>
-              <div className="input-group">
-                <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
-                <span className="input-group-btn">
-                  <button className="btn btn-success" type="button" title="Create new respository">Create</button>
-                </span>
+      <Panel header="Create a new respository">
+        <div className="media project-container">
+          <div className="media-body">
+            <form>
+              <div className="checkbox bg-info" title="Check in-case you want to create a bare repository (Git repository without a working directory)">
+                <label>
+                  <input type="checkbox" /> Create a bare repository.
+                </label>
               </div>
-            </div>
-          </form>
+              <div className="checkbox bg-info" title="Check in-case you want to add .gitignore in the root of the repository">
+                <label>
+                  <input type="checkbox" /> Add .ignore file on repository root.
+                </label>
+              </div>
+              <div className="form-group">
+                <DropdownList defaultValue={'Node'} data={ignoreList} caseSensitive={false} filter='contains'/>
+              </div>
+              <div className="checkbox bg-info" title="Check in-case you want to add license file in the root of the repository">
+                <label>
+                  <input type="checkbox" /> Add a license file on repository root.
+                </label>
+              </div>
+              <div className="form-group">
+                <DropdownList defaultValue={'MIT License'} data={license} caseSensitive={false} filter='contains'/>
+              </div>
+              <div className="checkbox bg-info" title="Check in-case you want to add README.md file in the root of the repository">
+                <label>
+                  <input type="checkbox" /> Initialize this repository with a README.md
+                </label>
+              </div>
+              <div className="form-group">
+                <label for="createRepository">Specify repository location:</label>
+                <div className="input-group">
+                  <input type="text" className="form-control" placeholder="E.g. C:\Workspace" />
+                  <span className="input-group-btn">
+                    <button className="btn btn-success" type="button" title="Create new respository">Create</button>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
+      </Panel>
     );
   }
 }
