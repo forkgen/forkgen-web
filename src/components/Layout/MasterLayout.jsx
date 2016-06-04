@@ -35,12 +35,12 @@ class MasterLayout extends React.Component {
   render() {
     return (
       <div className="container">
-        <Breadcrumb/>
-
-        <AlertBox type="danger" canClose="true">
-          <p className="lead">Oh snap! You got an error!</p>
-          <p>The connection was unable to initiate or complete a request with the Elasticsearch server.</p>
+        <AlertBox type="danger">
+          <h4>Oh snap! You got an error!</h4>
+          <p>Change this and that and try again. Duis mollis, est non commodo luctus</p>
         </AlertBox>
+
+        <Breadcrumb/>
 
         <section className="super-tab-container">
           <div className="row">
