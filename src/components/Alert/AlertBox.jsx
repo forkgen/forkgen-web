@@ -2,50 +2,38 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
+import { Alert } from 'react-bootstrap';
 
 /**
- * AlertBox class will return Bootstrap alert DOM structure.
+ * AlertBox class will return React-Bootstrap alert DOM structure.
  */
 class AlertBox extends React.Component {
   constructor(props) {
     super(props);
 
-    this.closeAlertBox = this.closeAlertBox.bind(this);
-  };
-
-  closeAlertBox(e) {
-    ReactDOM.findDOMNode(e.target).parentNode.parentNode.style.display = 'none';
-  };
-
-  render() {
-    let alertClassNames = {
-      'alert-box': true,
-      'alert': true,
-      'alert-dismissible': true,
-      'fade': true,
-      'in': true
+    this.state = {
+      alertVisible: false
     };
-
-    /**
-     * Set alert property type and provide these classnames to `classNames` method.
-     */
-    alertClassNames['alert-' + this.props.type] = true;
-    alertClassNames = classNames(alertClassNames);
-
-    let closeButton = '';
-    if(this.props.canClose === 'true') {
-      closeButton = <button type="button" className="close" onClick={this.closeAlertBox}><i className="fa fa-times"></i></button>;
-    }
-
-    return (
-      <div className={alertClassNames}>
-        {closeButton}
-        {this.props.children}
-      </div>
-    );
+    this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
   }
 
+  handleAlertDismiss() {
+    this.setState({
+      alertVisible: false
+    });
+  }
+
+  render() {
+    if (this.state.alertVisible) {
+      return (
+        <Alert bsStyle={this.props.type} onDismiss={this.handleAlertDismiss}>
+          {this.props.children}
+        </Alert>
+      );
+    } else {
+      return (<span></span>);
+    }
+  }
 };
 
 export default AlertBox;
