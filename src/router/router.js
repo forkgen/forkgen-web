@@ -8,8 +8,7 @@ const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
 import App from '../App.js';
 
 import Setup from '../views/Setup/ProjectSetup.jsx';
-import MyRepositoriesTabPane from '../views/MyRepositories/MyRepositoriesTabPane.jsx';
-import SettingsTabPane from '../views/Settings/SettingsTabPane.jsx';
+import SettingsTabPane from '../views/Settings/Settings.jsx';
 import ErrorPage from '../views/ErrorPage/PageNotFound.jsx';
 
 const Routes = (
@@ -17,7 +16,6 @@ const Routes = (
     <Route path = "/" component = {App}>
       <IndexRoute component = {Setup} />
       <Route path = "setup" component = {Setup} />
-      <Route path = "repositories" component = {MyRepositoriesTabPane} />
       <Route path = "settings" component = {SettingsTabPane} />
     </Route>
     <Route path="*" component={ErrorPage}/>
