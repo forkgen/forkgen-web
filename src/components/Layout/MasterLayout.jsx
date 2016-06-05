@@ -1,37 +1,12 @@
 'use strict';
 
 import React from 'react';
-
 import AlertBox from '../Alert/AlertBox.jsx';
-import TabList from '../Tabs/TabList.jsx';
-
 import Breadcrumb from '../Breadcrumb/Breadcrumb.jsx';
-import TabPaneContainer from '../Tabs/TabPaneContainer.jsx';
 import Footer from '../Footer/Footer.jsx';
+import Setup from '../../views/Setup/ProjectSetup.jsx';
 
 class MasterLayout extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      "data": [{
-        "to": "/setup",
-        "id": "setup-tab",
-        "name": "Project Setup",
-        "defaultActive": true
-      }, {
-        "to": "/repositories",
-        "id": "repositories-tab",
-        "name": "Your Repositories",
-        "count": 42
-      }, {
-        "to": "/settings",
-        "id": "settings-tab",
-        "name": "Account Settings"
-      }]
-    };
-
-  }
   render() {
     return (
       <div className="container">
@@ -42,13 +17,10 @@ class MasterLayout extends React.Component {
 
         <Breadcrumb/>
 
-        <section className="super-tab-container">
+        <section className="sub-container">
           <div className="row">
-            <div className="col-md-12 tab-area">
-              <ul id="super-tab" className="nav nav-tabs super-tab-component">
-                {this.state.data.map((link, i) => <TabList key = {i} tab = {link}/>)}
-              </ul>
-              <TabPaneContainer/>
+            <div className="col-md-12">
+              <Setup/>
             </div>
           </div>
         </section>
