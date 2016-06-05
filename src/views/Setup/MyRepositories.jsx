@@ -15,26 +15,48 @@ class Clone extends React.Component {
             <input type="text" className="form-control" placeholder="E.g. Filter My Repository" />
           </div>
           <div className="form-group my-repository-list">
-            <ul className="list-group">
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-              <li className="list-group-item"><Link to="protocore/open">Protocore</Link></li>
-            </ul>
+            <div className="list-group">
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+              <Link to="protocore/open" className="list-group-item">
+                <h4 className="list-group-item-heading">Protocore</h4>
+                <p className="list-group-item-text">C:\Projects\Protocore</p>
+              </Link>
+            </div>
           </div>
         </form>
       </Panel>
