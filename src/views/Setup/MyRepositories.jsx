@@ -15,6 +15,9 @@ class Clone extends React.Component {
             <input type="text" className="form-control" placeholder="E.g. Filter My Repository" />
           </div>
           <div className="form-group my-repository-list">
+            <p className="bg-info">
+              No repository found
+            </p>
             <div className="list-group">
               <Link to="protocore/open" className="list-group-item">
                 <div className="media">
