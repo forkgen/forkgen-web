@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import AlertBox from '../Alert/AlertBox.jsx';
-import Breadcrumb from '../Breadcrumb/Breadcrumb.jsx';
+import AlertBox from '../../components/Alert/AlertBox.jsx';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb.jsx';
 import Footer from '../Footer/Footer.jsx';
-import Setup from '../../views/Setup/ProjectSetup.jsx';
+import Setup from '../Setup/ProjectSetup.jsx';
 
 class MasterLayout extends React.Component {
   render() {
