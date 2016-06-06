@@ -27,6 +27,12 @@
   },
   "homepage": "https://github.com/hegdeashwin/forkgen",
   "dependencies": {
+    "object-assign": "^4.1.0",
+    "underscore": "^1.8.3",
+    "keymirror": "^0.1.1",
+    "superagent": "^1.8.3",
+    "es6-promise": "^3.2.1",
+    "events": "^1.1.0",
     "axios": "^0.9.1",
     "body-parser": "~1.15.0",
     "bootstrap": "^3.3.6",
