@@ -1,10 +1,10 @@
 'use strict';
 
 import React from 'react';
-import Initialize from './Initialize.jsx';
-import Clone from './Clone.jsx';
-import OpenExist from './OpenExist.jsx';
-import MyRepositories from './MyRepositories.jsx';
+import Initialize from '../../components/Initialize/Initialize.jsx';
+import Clone from '../../components/Clone/Clone.jsx';
+import OpenExist from '../../components/Open/OpenExist.jsx';
+import MyRepositories from '../../components/MyRepositories/MyRepositories.jsx';
 
 class ProjectSetup extends React.Component {
   render() {
