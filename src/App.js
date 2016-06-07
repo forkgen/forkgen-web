@@ -1,7 +1,10 @@
 import React from 'react';
 
 import HorizontalNav from './components/Navbar/HorizontalNav.jsx';
-import MasterLayout from './views/Layout/MasterLayout.jsx';
+import AlertBox from './components/Alert/AlertBox.jsx';
+import Breadcrumb from './components/Breadcrumb/Breadcrumb.jsx';
+import Footer from './views/Footer/Footer.jsx';
+import Setup from './views/Setup/ProjectSetup.jsx';
 
 import 'bootstrap/dist/css/bootstrap-theme.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,7 +17,21 @@ class App extends React.Component {
     return (
       <div>
         <HorizontalNav />
-        <MasterLayout />
+        <div className="container">
+          <AlertBox type="danger">
+            <h4>Oh snap! You got an error!</h4>
+            <p>Change this and that and try again. Duis mollis, est non commodo luctus</p>
+          </AlertBox>
+          <Breadcrumb/>
+          <section className="sub-container">
+            <div className="row">
+              <div className="col-md-12">
+                {this.props.children}
+              </div>
+            </div>
+          </section>
+          <Footer/>
+        </div>
       </div>
     );
   }
