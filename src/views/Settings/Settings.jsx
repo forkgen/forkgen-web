@@ -13,15 +13,7 @@ class Settings extends React.Component {
             <SettingsSidebar />
           </div>
           <div className="col-md-9">
-            <div className="panel panel-default">
-              <div className="panel-heading">
-                <h3 className="panel-title">Panel title</h3>
-              </div>
-              <div className="panel-body">
-                Panel content
-              </div>
-              <div className="panel-footer">Panel footer</div>
-            </div>
+            {this.props.children}
           </div>
         </div>
       </div>
