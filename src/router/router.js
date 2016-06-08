@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
+import { Router, Route, IndexRoute, useRouterHistory, IndexRedirect } from 'react-router';
 import { createHashHistory } from 'history';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false });
@@ -23,11 +23,13 @@ const Routes = (
       <IndexRoute component = {Setup} />
       <Route path = "setup" component = {Setup} />
       <Route path = "settings" component = {Settings}>
+        <IndexRedirect to="/settings/profile" />
         <Route path = "profile" component = {Profile} />
         <Route path = "notifications" component = {Notifications} />
         <Route path = "sshkey" component = {SSHkey} />
       </Route>
       <Route path = "open/:repository/:branch">
+        <IndexRedirect to="/open/:repository/:branch/dashboard" />
         <Route path = "dashboard" component = {Dashboard} />
         <Route path = "commits" component = {Commits} />
         <Route path = "settings" component = {RepoSettings} />

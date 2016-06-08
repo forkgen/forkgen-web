@@ -19,7 +19,7 @@ class Clone extends React.Component {
               No repository found
             </p>
             <div className="list-group">
-              <Link to="protocore/open" className="list-group-item">
+              <Link to="open/protocore/master/dashboard" className="list-group-item">
                 <div className="media">
                   <div className="media-left">
                     <i className="fa fa-3x fa-github"></i>
