@@ -15,8 +15,16 @@ class HorizontalMenu extends React.Component {
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
-        <Navbar.Collapse>          
+        <Navbar.Collapse>
+          <Nav>
+            <NavItem eventKey={1} href="#"><i className="fa fa-lg fa-home"></i></NavItem>            
+          </Nav>
           <Nav pullRight>
+            <NavDropdown eventKey={2} title="Settings" id="menu-view">
+              <MenuItem eventKey={2.1} href="#/settings/profile">Profile</MenuItem>
+              <MenuItem eventKey={2.2} href="#/settings/notifications">Notifications</MenuItem>
+              <MenuItem eventKey={2.3} href="#/settings/sshkey">SSH Key</MenuItem>
+            </NavDropdown>
             <NavDropdown className="navbar-right" eventKey={4} title="Developers" id="menu-developers">
               <MenuItem eventKey={4.1} href="//github.com/hegdeashwin/forkgen" target="_blank">Github Home Page</MenuItem>
               <MenuItem divider />
