@@ -29,6 +29,7 @@ const Routes = (
         <Route path = "sshkey" component = {SSHkey} />
       </Route>
       <Route path = "open/:repository/:branch">
+        <IndexRedirect to="/open/:repository/:branch/dashboard" />
         <Route path = "dashboard" component = {Dashboard} />
         <Route path = "commits" component = {Commits} />
         <Route path = "settings" component = {RepoSettings} />
