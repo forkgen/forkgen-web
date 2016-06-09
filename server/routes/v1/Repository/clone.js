@@ -1,15 +1,14 @@
 'use strict';
 
-var express = require('express');
-var router = express.Router();
+import express from 'express';
+import { Clone } from 'nodegit';
 
-var Git = require('nodegit');
-var Clone = Git.Clone;
+let router = express.Router();
 
-router.post('/clone', function(req, res, next) {
-	var reqBody = req.body;
-	
-	Clone.clone(reqBody.CloneURL, reqBody.localRepoPath).then(function(repository) {
+router.post('/clone', (req, res, next) => {
+	let reqBody = req.body;
+
+	Clone.clone(reqBody.CloneURL, reqBody.localRepoPath).then((repository) => {
 		res.status(200).json({
 			"status": true,
 			"responseMsg": "Remote repository '" + reqBody.CloneURL + "' has been cloned at the location '" + reqBody.localRepoPath + "'",

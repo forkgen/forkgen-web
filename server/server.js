@@ -1,13 +1,13 @@
 'use strict';
 
-var http = require('http'),
-	app = require('./app'),
-	PRODUCT = require('../package.json');
+import http from 'http';
+import app from './app';
+import PRODUCT from '../package.json';
 
 /**
  * Create HTTP server.
  */
-var server = http.createServer(app);
+let server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
