@@ -1,21 +1,21 @@
 'use strict';
 
-var express = require('express'),
-	morgan = require('morgan'),
-	cookieParser = require('cookie-parser'),
-	bodyParser = require('body-parser'),
-	path = require('path'),
-	fs = require('fs');
+import express from 'express';
+import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import path from 'path';
+import fs from 'fs';
 
-var CONFIG = require("../configs/server.env");
+import CONFIG from '../configs/server.env';
 
-var app = express(),
-	router = express.Router();
+let app = express();
+let router = express.Router();
 
 /**
  * Create a write stream (in append mode)
  */
-var accessLogStream = fs.createWriteStream(__dirname + '/' + CONFIG.logger.dirname + '/' + CONFIG.logger.filename, {
+let accessLogStream = fs.createWriteStream(__dirname + '/' + CONFIG.logger.dirname + '/' + CONFIG.logger.filename, {
 	flags: 'a'
 });
 
@@ -60,5 +60,7 @@ switch (NODE_ENV.toLowerCase()) {
 
 app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/init'));
 app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/clone'));
+app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/open'));
+app.use('/api/' + CONFIG.api.defaults.version + '/repository', require('./routes/' + CONFIG.api.defaults.version + '/Repository/config'));
 
 module.exports = app;
