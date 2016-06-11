@@ -48,7 +48,7 @@
     "joi": "^8.0.5",
     "morgan": "~1.7.0",
     "node-dir": "^0.1.10",
-    "nodegit": "^0.12.2",
+    "nodegit": "^0.13.2",
     "nodemailer": "^1.4.0",
     "react": "^15.1.0",
     "react-data-components": "^0.6.0",
