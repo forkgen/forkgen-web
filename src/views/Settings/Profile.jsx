@@ -2,11 +2,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Credential from '../../components/Credential/Credential.jsx';
 
 class Profile extends React.Component {
   render() {
     return (
-      <h1>Profile Content</h1>
+      <Credential />
     );
   }
 };
